@@ -10,6 +10,7 @@ import { ApartmentService } from 'src/app/services/apartment.service';
 export class ApartmentComponent implements OnInit {
   apartments: Apartment[] = [];
   dataLoaded = false;
+	filterText = "";
 
   constructor(private apartmentService: ApartmentService) { }
 

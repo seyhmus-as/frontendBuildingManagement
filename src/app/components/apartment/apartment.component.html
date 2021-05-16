@@ -1,3 +1,15 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-info" role="status">
+     <span class="visually-hidden">Loading...</span>
+ </div>
+ <div class="mb-3">
+     <label for="efilterText" class="form-label">Ara</label>
+     <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Aramak içinin dokunun">
+ </div>
+
+ <div *ngIf="filterText.length>3" class="alert alert-success">
+     {{filterText}} aradınız
+ </div>
+
 <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
      <span class="visually-hidden">Loading...</span>
 </div>
@@ -12,9 +24,9 @@
           </tr>
      </thead>
      <tbody>
-          <tr *ngFor="let item of apartments">
+          <tr *ngFor="let item of apartments| filterPipe:filterText" >
                <td>{{item.apartmentId}}</td>
-               <td>{{item.apartmentName}}</td>
+               <td>{{item.apartmentName| uppercase}}</td>
                <td>{{item.numberOfFlat}}</td>
                <td>{{item.numberOfFloor}}</td>
           </tr>
