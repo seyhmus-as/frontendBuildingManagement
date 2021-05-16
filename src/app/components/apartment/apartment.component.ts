@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Apartment } from 'src/app/models/apartment';
+import { ApartmentService } from 'src/app/services/apartment.service';
 
 @Component({
   selector: 'app-apartment',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./apartment.component.css']
 })
 export class ApartmentComponent implements OnInit {
+  apartments: Apartment[] = [];
+  dataLoaded = false;
 
-  constructor() { }
+  constructor(private apartmentService: ApartmentService) { }
 
   ngOnInit(): void {
+    this.getApartments();
   }
 
+  getApartments() {
+    this.apartmentService.getApartments().subscribe(response => {
+      this.apartments = response.data;
+      this.dataLoaded = true;
+    })
+  }
 }

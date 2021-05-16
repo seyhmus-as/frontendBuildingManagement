@@ -1,4 +1,4 @@
-import { Apartment } from "./Apartment";
+import { Apartment } from "./apartment";
 import { ResponseModel } from "./responseModel";
 
 export interface ApartmentResponseModel extends ResponseModel {
