@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ApartmentComponent } from './components/apartment/apartment.component';
+import { FlatComponent } from './components/flat/flat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NaviComponent,
     SidebarComponent,
-    ApartmentComponent
+    ApartmentComponent,
+    FlatComponent
   ],
   imports: [
     BrowserModule,

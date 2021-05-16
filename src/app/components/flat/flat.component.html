@@ -4,19 +4,19 @@
 <table class="table">
      <thead>
           <tr>
-               <th>Apartment ıd</th>
-               <th>apartment name </th>
-               <th>numberOfFlat</th>
-               <th>numberOfFloor</th>
+               <th>flat id</th>
+               <th>apartmentId</th>
+               <th>priceOfRent</th>
+               <th>renterId</th>
                <th></th>
           </tr>
      </thead>
      <tbody>
-          <tr *ngFor="let item of apartments">
+          <tr *ngFor="let item of flats">
+               <td>{{item.flatId}}</td>
                <td>{{item.apartmentId}}</td>
-               <td>{{item.apartmentName}}</td>
-               <td>{{item.numberOfFlat}}</td>
-               <td>{{item.numberOfFloor}}</td>
+               <td>{{item.priceOfRent}}</td>
+               <td>{{item.renterId}}</td>
           </tr>
      </tbody>
 </table>
