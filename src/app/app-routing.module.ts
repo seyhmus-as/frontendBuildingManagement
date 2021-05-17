@@ -6,6 +6,7 @@ import { CardHistoryComponent } from './components/card-history/card-history.com
 import { RenterComponent } from './components/renter/renter.component';
 import { FlatComponent } from './components/flat/flat.component';
 import { ApartmentAddComponent } from './components/apartment-add/apartment-add.component';
+import { RenterAddComponent } from './components/renter-add/renter-add.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:ApartmentComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path:"renters",component:RenterComponent},
 
   {path: "apartments/add", component: ApartmentAddComponent}
+  //{path: "renters/add", component: RenterAddComponent}
 ];
 
 @NgModule({

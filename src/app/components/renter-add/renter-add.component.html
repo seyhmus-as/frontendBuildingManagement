@@ -1,0 +1,43 @@
+<div class="content">
+     <div class="col-md-12">
+         <div class="card">
+             <div class="card-header"><h5 class="title">Apartment Add</h5></div>
+             <div class="card-body">
+                 <form [formGroup]="renterAddForm">
+                    <div class="mb-3">
+                        <label for="renterId">renterId</label>
+                        <div class="form-group">
+                            <input 
+                            readonly
+                            type="number" 
+                            id="renterId" 
+                            formControlName="renterId" class="form-control" 
+                            placeholder="0"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="firstName">first Name</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="firstName" 
+                            formControlName="firstName" class="form-control" 
+                            placeholder="first Name"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName">last Name</label>
+                        <div class="form-group">
+                            <input type="text" 
+                            id="lastName" 
+                            formControlName="lastName" class="form-control" 
+                            placeholder="last Name"/>
+                        </div>
+                    </div>
+                 </form>
+             </div>
+             <div class="card-footer">
+                 <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+             </div>
+         </div>
+     </div>
+ </div>

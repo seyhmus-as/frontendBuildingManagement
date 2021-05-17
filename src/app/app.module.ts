@@ -16,7 +16,11 @@ import { ToastrModule } from "ngx-toastr";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RenterComponent } from './components/renter/renter.component';
 import { CardComponent } from './components/card/card.component';
-import { CardHistoryComponent } from './components/card-history/card-history.component'
+import { CardHistoryComponent } from './components/card-history/card-history.component';
+import { CardAddComponent } from './components/card-add/card-add.component';
+import { CardHistoryAddComponent } from './components/card-history-add/card-history-add.component';
+import { RenterAddComponent } from './components/renter-add/renter-add.component';
+import { FlatAddComponent } from './components/flat-add/flat-add.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { CardHistoryComponent } from './components/card-history/card-history.com
     ApartmentAddComponent,
     RenterComponent,
     CardComponent,
-    CardHistoryComponent
+    CardHistoryComponent,
+    CardAddComponent,
+    CardHistoryAddComponent,
+    RenterAddComponent,
+    FlatAddComponent,
   ],
   imports: [
     BrowserModule,
