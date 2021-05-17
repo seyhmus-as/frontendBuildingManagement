@@ -9,18 +9,20 @@
 <table class="table">
      <thead>
           <tr>
-               <th>Apartment ıd</th>
-               <th>apartment name </th>
-               <th>numberOfFlat</th>
-               <th>numberOfFloor</th>
+               <th>Card Id</th>
+               <th>Id</th>
+               <th>FlatId</th>
+               <th>DateTime</th>
+               <th>Price</th>
           </tr>
      </thead>
      <tbody>
-          <tr *ngFor="let item of apartments| filterPipe:filterText">
-               <td>{{item.apartmentId}}</td>
-               <td>{{item.apartmentName| uppercase}}</td>
-               <td>{{item.numberOfFlat}}</td>
-               <td>{{item.numberOfFloor}}</td>
+          <tr *ngFor="let item of cardHistories">
+               <td>{{item.cardId}}</td>
+               <td>{{item.id}}</td>
+               <td>{{item.flatId}}</td>
+               <td>{{item.dateTime}}</td>
+               <td>{{item.price}}</td>
           </tr>
      </tbody>
 </table>

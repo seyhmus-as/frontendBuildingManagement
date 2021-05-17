@@ -13,7 +13,11 @@ import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 import { ApartmentAddComponent } from './components/apartment-add/apartment-add.component';
 
 import { ToastrModule } from "ngx-toastr";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { RenterComponent } from './components/renter/renter.component';
+import { CardComponent } from './components/card/card.component';
+import { CardHistoryComponent } from './components/card-history/card-history.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
     ApartmentComponent,
     FlatComponent,
     FilterPipePipe,
-    ApartmentAddComponent
+    ApartmentAddComponent,
+    RenterComponent,
+    CardComponent,
+    CardHistoryComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,7 @@ import { ApartmentService } from 'src/app/services/apartment.service';
 
 export class ApartmentAddComponent implements OnInit {
 
-	apartmentAddForm: FormGroup;
+	apartmentAddForm!: FormGroup;
 
 	constructor(
 		private formBuilder: FormBuilder,

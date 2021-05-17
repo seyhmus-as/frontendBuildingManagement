@@ -9,6 +9,7 @@ import { FlatService } from 'src/app/services/flat.service';
 export class FlatComponent implements OnInit {
   flats: Flat[] = [];
   dataLoaded = false;
+  filterText = "";
 
   constructor(private flatService: FlatService) { }
 

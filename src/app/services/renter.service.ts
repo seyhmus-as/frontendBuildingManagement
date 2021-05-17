@@ -2,22 +2,22 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
-import { Flat } from '../models/flat';
+import { Renter } from '../models/renter';
 import { ResponseModel } from '../models/responseModel';
 
 @Injectable({
   providedIn: 'root'
 })
-export class FlatService {
+export class RenterService {
 
   apiUrl='https://localhost:44380/api/';
 
   constructor(private httpClient: HttpClient) { }
 
-  getFlats():Observable<ListResponseModel<Flat>>{
-    return this.httpClient.get<ListResponseModel<Flat>>(this.apiUrl + "flats/getall")
+  getRenters():Observable<ListResponseModel<Renter>>{
+    return this.httpClient.get<ListResponseModel<Renter>>(this.apiUrl + "renters/getall")
   }
-  add(apartment:FlatService):Observable<ResponseModel>{
-		return this.httpClient.post<ResponseModel>(this.apiUrl+"apartments/add",apartment);
+  add(renter:RenterService):Observable<ResponseModel>{
+		return this.httpClient.post<ResponseModel>(this.apiUrl+"renters/add",renter);
 	}
 }
