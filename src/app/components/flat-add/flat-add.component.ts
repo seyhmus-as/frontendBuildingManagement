@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from "@angular/forms"
 import { ToastrService } from 'ngx-toastr';
-import { ApartmentService } from 'src/app/services/apartment.service';
+import { FlatService } from 'src/app/services/flat.service';
 
 @Component({
   selector: 'app-flat-add',
@@ -11,31 +11,31 @@ import { ApartmentService } from 'src/app/services/apartment.service';
 
 export class FlatAddComponent implements OnInit {
 
-	apartmentAddForm!: FormGroup;
+	flatAddForm!: FormGroup;
 
 	constructor(
 		private formBuilder: FormBuilder,
-		private apartmentService: ApartmentService,
+		private flatService: FlatService,
 		private toastrService: ToastrService
 	) { }
 
 	ngOnInit(): void {
-		this.createApartmentAddForm();
+		this.createFlatAddForm();
 	}
 
-	createApartmentAddForm() {
-		this.apartmentAddForm = this.formBuilder.group({
-			apartmentName: ["", Validators.required],
+	createFlatAddForm() {
+		this.flatAddForm = this.formBuilder.group({
+			flatId: ["", Validators.required],
 			apartmentId: ["", Validators.required],
-			numberOfFlat: ["", Validators.required],
-			numberOfFloor: ["", Validators.required]
+			priceOfRent: ["", Validators.required],
+			renterId: ["", Validators.required]
 		})
 	}
 
 	add() {
-		if (this.apartmentAddForm.valid) {
-			let apartmentModel = Object.assign({}, this.apartmentAddForm.value)
-			this.apartmentService.add(apartmentModel).subscribe(response => {
+		if (this.flatAddForm.valid) {
+			let flatModel = Object.assign({}, this.flatAddForm.value)
+			this.flatService.add(flatModel).subscribe(response => {
 				this.toastrService.success(response.message, "Başarılı")
 			}, responseError => {
 				if (responseError.error.Errors.length > 0) {

@@ -25,7 +25,7 @@ export class RenterAddComponent implements OnInit {
 
 	createRenterAddForm() {
 		this.renterAddForm = this.formBuilder.group({
-			renterId: ["", Validators.required],
+			renterId: ["0", Validators.required],
 			firstName: ["", Validators.required],
 			lastName: ["", Validators.required],
 		})

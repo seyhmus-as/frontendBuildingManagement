@@ -2,6 +2,6 @@ export interface CardHistory{
      cardId:number;
      id:number;
      flatId:number;
-     dateTime:Date;
+     date:Date;
      price:number;
 }

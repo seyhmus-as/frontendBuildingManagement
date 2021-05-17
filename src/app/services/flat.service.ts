@@ -17,7 +17,7 @@ export class FlatService {
   getFlats():Observable<ListResponseModel<Flat>>{
     return this.httpClient.get<ListResponseModel<Flat>>(this.apiUrl + "flats/getall")
   }
-  add(apartment:FlatService):Observable<ResponseModel>{
-		return this.httpClient.post<ResponseModel>(this.apiUrl+"apartments/add",apartment);
+  add(flat:FlatService):Observable<ResponseModel>{
+		return this.httpClient.post<ResponseModel>(this.apiUrl+"flats/add",flat);
 	}
 }

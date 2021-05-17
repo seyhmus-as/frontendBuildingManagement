@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from "@angular/forms"
 import { ToastrService } from 'ngx-toastr';
-import { ApartmentService } from 'src/app/services/apartment.service';
+import { CardService } from 'src/app/services/card.service';
 
 @Component({
   selector: 'app-card-add',
@@ -11,31 +11,30 @@ import { ApartmentService } from 'src/app/services/apartment.service';
 
 export class CardAddComponent implements OnInit {
 
-	apartmentAddForm!: FormGroup;
+	cardAddForm!: FormGroup;
 
 	constructor(
 		private formBuilder: FormBuilder,
-		private apartmentService: ApartmentService,
+		private cardService: CardService,
 		private toastrService: ToastrService
 	) { }
 
 	ngOnInit(): void {
-		this.createApartmentAddForm();
+		this.createCardAddForm();
 	}
 
-	createApartmentAddForm() {
-		this.apartmentAddForm = this.formBuilder.group({
-			apartmentName: ["", Validators.required],
-			apartmentId: ["", Validators.required],
-			numberOfFlat: ["", Validators.required],
-			numberOfFloor: ["", Validators.required]
+	createCardAddForm() {
+		this.cardAddForm = this.formBuilder.group({
+			name: ["", Validators.required],
+			cardId: ["0", Validators.required],
+			isIncome: ["", Validators.required]
 		})
 	}
 
 	add() {
-		if (this.apartmentAddForm.valid) {
-			let apartmentModel = Object.assign({}, this.apartmentAddForm.value)
-			this.apartmentService.add(apartmentModel).subscribe(response => {
+		if (this.cardAddForm.valid) {
+			let cardModel = Object.assign({}, this.cardAddForm.value)
+			this.cardService.add(cardModel).subscribe(response => {
 				this.toastrService.success(response.message, "Başarılı")
 			}, responseError => {
 				if (responseError.error.Errors.length > 0) {

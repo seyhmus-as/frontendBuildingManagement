@@ -18,6 +18,6 @@ export class RenterService {
     return this.httpClient.get<ListResponseModel<Renter>>(this.apiUrl + "renters/getall")
   }
   add(renter:RenterService):Observable<ResponseModel>{
-		return this.httpClient.post<ResponseModel>(this.apiUrl+"renters/add",renter);
+		return this.httpClient.post<ResponseModel>(this.apiUrl+"Renters/add",renter);
 	}
 }

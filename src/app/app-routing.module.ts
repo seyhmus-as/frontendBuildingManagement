@@ -7,6 +7,9 @@ import { RenterComponent } from './components/renter/renter.component';
 import { FlatComponent } from './components/flat/flat.component';
 import { ApartmentAddComponent } from './components/apartment-add/apartment-add.component';
 import { RenterAddComponent } from './components/renter-add/renter-add.component';
+import { CardAddComponent } from './components/card-add/card-add.component';
+import { FlatAddComponent } from './components/flat-add/flat-add.component';
+import { CardHistoryAddComponent } from './components/card-history-add/card-history-add.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:ApartmentComponent},
@@ -16,8 +19,11 @@ const routes: Routes = [
   {path:"cardHistories",component:CardHistoryComponent},
   {path:"renters",component:RenterComponent},
 
-  {path: "apartments/add", component: ApartmentAddComponent}
-  //{path: "renters/add", component: RenterAddComponent}
+  {path: "apartments/add", component: ApartmentAddComponent},
+  {path: "renters/add", component: RenterAddComponent},
+  {path: "flats/add", component: FlatAddComponent},
+  {path: "cards/add", component: CardAddComponent},
+  {path: "cardHistories/add", component: CardHistoryAddComponent}
 ];
 
 @NgModule({
