@@ -23,24 +23,29 @@ import { CardHistoryAddComponent } from './components/card-history-add/card-hist
 import { RenterAddComponent } from './components/renter-add/renter-add.component';
 import { FlatAddComponent } from './components/flat-add/flat-add.component';
 import { LoginComponent } from './components/login/login.component';
+import { ApartmentDeleteComponent } from './components/apartment-delete/apartment-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NaviComponent,
     SidebarComponent,
+    FilterPipePipe,
+    LoginComponent,
+
     ApartmentComponent,
     FlatComponent,
-    FilterPipePipe,
-    ApartmentAddComponent,
     RenterComponent,
     CardComponent,
     CardHistoryComponent,
+
+    ApartmentAddComponent,
     CardAddComponent,
     CardHistoryAddComponent,
     RenterAddComponent,
     FlatAddComponent,
-    LoginComponent
+    
+    ApartmentDeleteComponent
   ],
   imports: [
     BrowserModule,

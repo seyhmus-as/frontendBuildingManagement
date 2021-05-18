@@ -6,6 +6,7 @@ import { CardHistoryComponent } from './components/card-history/card-history.com
 import { RenterComponent } from './components/renter/renter.component';
 import { FlatComponent } from './components/flat/flat.component';
 import { ApartmentAddComponent } from './components/apartment-add/apartment-add.component';
+import { ApartmentDeleteComponent } from './components/apartment-delete/apartment-delete.component';
 import { RenterAddComponent } from './components/renter-add/renter-add.component';
 import { CardAddComponent } from './components/card-add/card-add.component';
 import { FlatAddComponent } from './components/flat-add/flat-add.component';
@@ -15,18 +16,23 @@ import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:ApartmentComponent},
+
   {path:"apartments",component:ApartmentComponent},
   {path:"flats",component:FlatComponent},
   {path:"cards",component:CardComponent},
   {path:"cardHistories",component:CardHistoryComponent},
   {path:"renters",component:RenterComponent},
+  
+  {path: "login", component: LoginComponent},
 
   {path: "apartments/add", component: ApartmentAddComponent,canActivate:[LoginGuard]},
   {path: "renters/add", component: RenterAddComponent},
   {path: "flats/add", component: FlatAddComponent},
   {path: "cards/add", component: CardAddComponent},
   {path: "cardHistories/add", component: CardHistoryAddComponent},
-  {path: "login", component: LoginComponent},
+
+  {path: "apartments/delete", component: ApartmentDeleteComponent,canActivate:[LoginGuard]},
+  
 ];
 
 @NgModule({
