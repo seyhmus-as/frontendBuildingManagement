@@ -12,8 +12,8 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 export class ApartmentDeleteComponent implements OnInit {
 
-	deletedId: number
-	params : HttpParams;
+	deletedId?: number
+	params? : HttpParams;
 	
 	constructor(
 		private formBuilder: FormBuilder,
@@ -29,7 +29,7 @@ export class ApartmentDeleteComponent implements OnInit {
 
 	delete() {
 		console.log(this.deletedId);
-		this.params = new HttpParams().set("id",this.deletedId);
+		this.params = new HttpParams().set("id",String(this.deletedId));
 		this.apartmentService.delete(this.params).subscribe(response => {
 			this.toastrService.success(response.message, "Başarılı")
 		}, responseError => {
