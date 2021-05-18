@@ -15,13 +15,13 @@ import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:ApartmentComponent},
-  {path:"apartments",component:ApartmentComponent,canActivate:[LoginGuard]},
+  {path:"apartments",component:ApartmentComponent},
   {path:"flats",component:FlatComponent},
   {path:"cards",component:CardComponent},
   {path:"cardHistories",component:CardHistoryComponent},
   {path:"renters",component:RenterComponent},
 
-  {path: "apartments/add", component: ApartmentAddComponent},
+  {path: "apartments/add", component: ApartmentAddComponent,canActivate:[LoginGuard]},
   {path: "renters/add", component: RenterAddComponent},
   {path: "flats/add", component: FlatAddComponent},
   {path: "cards/add", component: CardAddComponent},
