@@ -20,9 +20,8 @@ export class FlatService {
   add(flat: FlatService): Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl + "flats/add", flat);
   }
-  delete(params: HttpParams) {
-    console.log(this.apiUrl + "flats/delete?" + params);
-    return this.httpClient.get<ResponseModel>(this.apiUrl + "flats/delete", { params });
+  delete(id:number) {
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "flats/delete?id="+id, null);
   }
   update(flat: FlatService): Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl + "flats/update", flat);

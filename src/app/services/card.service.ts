@@ -20,9 +20,8 @@ export class CardService {
   add(card: CardService): Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl + "cards/add", card);
   }
-  delete(params: HttpParams) {
-    console.log(this.apiUrl + "cards/delete?" + params);
-    return this.httpClient.get<ResponseModel>(this.apiUrl + "cards/delete", { params });
+  delete(id:number) {
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "cards/delete?id="+id, null);
   }
   update(card: CardService): Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl + "cards/update", card);

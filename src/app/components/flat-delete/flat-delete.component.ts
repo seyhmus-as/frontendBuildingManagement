@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators } from "@angular/forms"
 import { ToastrService } from 'ngx-toastr';
 import { FlatService } from 'src/app/services/flat.service';
-import { HttpClient, HttpParams } from '@angular/common/http';
 @Component({
 	selector: 'app-flat-delete',
 	templateUrl: './flat-delete.component.html',
@@ -12,10 +10,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 export class FlatDeleteComponent implements OnInit {
 
 	deletedId?: number
-	params?: HttpParams;
-
 	constructor(
-		private formBuilder: FormBuilder,
 		private flatService: FlatService,
 		private toastrService: ToastrService
 	) { }
@@ -24,8 +19,11 @@ export class FlatDeleteComponent implements OnInit {
 	}
 
 	delete() {
-		this.params = new HttpParams().set("id", String(this.deletedId));
-		this.flatService.delete(this.params).subscribe(response => {
+		if (this.deletedId == null) {
+			this.toastrService.error("number girmediniz");
+			return;
+		}
+		this.flatService.delete(this.deletedId).subscribe(response => {
 			this.toastrService.success(response.message, "Başarılı")
 		}, responseError => {
 			this.toastrService.error(responseError.error, "Doğrulama hatası")
