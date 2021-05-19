@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +24,10 @@ import { RenterAddComponent } from './components/renter-add/renter-add.component
 import { FlatAddComponent } from './components/flat-add/flat-add.component';
 import { LoginComponent } from './components/login/login.component';
 import { ApartmentDeleteComponent } from './components/apartment-delete/apartment-delete.component';
+import { CardDeleteComponent } from './components/card-delete/card-delete.component';
+import { CardHistoryDeleteComponent } from './components/card-history-delete/card-history-delete.component';
+import { FlatDeleteComponent } from './components/flat-delete/flat-delete.component';
+import { RenterDeleteComponent } from './components/renter-delete/renter-delete.component';
 
 @NgModule({
   declarations: [
@@ -44,22 +48,26 @@ import { ApartmentDeleteComponent } from './components/apartment-delete/apartmen
     CardHistoryAddComponent,
     RenterAddComponent,
     FlatAddComponent,
-    
-    ApartmentDeleteComponent
+
+    ApartmentDeleteComponent,
+    CardDeleteComponent,
+    CardHistoryDeleteComponent,
+    FlatDeleteComponent,
+    RenterDeleteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-		BrowserAnimationsModule,
-		ReactiveFormsModule,
-		ToastrModule.forRoot({
-			positionClass: "toast-bottom-right"
-		})
-	],
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      positionClass: "toast-bottom-right"
+    })
+  ],
   providers: [
-    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

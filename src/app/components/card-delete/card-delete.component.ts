@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from "@angular/forms"
 import { ToastrService } from 'ngx-toastr';
-import { ApartmentService } from 'src/app/services/apartment.service';
+import { CardService } from 'src/app/services/card.service';
 import { HttpClient, HttpParams } from '@angular/common/http';
-
 @Component({
-	selector: 'app-apartment-delete',
-	templateUrl: './apartment-delete.component.html',
-	styleUrls: ['./apartment-delete.component.css']
+  selector: 'app-card-delete',
+  templateUrl: './card-delete.component.html',
+  styleUrls: ['./card-delete.component.css']
 })
 
-export class ApartmentDeleteComponent implements OnInit {
+export class CardDeleteComponent implements OnInit {
 
 	deletedId?: number
 	params? : HttpParams;
 	
 	constructor(
 		private formBuilder: FormBuilder,
-		private apartmentService: ApartmentService,
+		private cardService: CardService,
 		private toastrService: ToastrService
 	) { }
 
@@ -26,7 +25,7 @@ export class ApartmentDeleteComponent implements OnInit {
 
 	delete() {
 		this.params = new HttpParams().set("id",String(this.deletedId));
-		this.apartmentService.delete(this.params).subscribe(response => {
+		this.cardService.delete(this.params).subscribe(response => {
 			this.toastrService.success(response.message, "Başarılı")
 		}, responseError => {
 			if (responseError.error.Errors.length > 0) {
@@ -37,3 +36,4 @@ export class ApartmentDeleteComponent implements OnInit {
 		})
 	}
 }
+

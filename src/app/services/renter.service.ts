@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
 import { Renter } from '../models/renter';
@@ -10,14 +10,18 @@ import { ResponseModel } from '../models/responseModel';
 })
 export class RenterService {
 
-  apiUrl='https://localhost:44380/api/';
+  apiUrl = 'https://localhost:44380/api/';
 
   constructor(private httpClient: HttpClient) { }
 
-  getRenters():Observable<ListResponseModel<Renter>>{
+  getRenters(): Observable<ListResponseModel<Renter>> {
     return this.httpClient.get<ListResponseModel<Renter>>(this.apiUrl + "renters/getall")
   }
-  add(renter:RenterService):Observable<ResponseModel>{
-		return this.httpClient.post<ResponseModel>(this.apiUrl+"Renters/add",renter);
-	}
+  add(renter: RenterService): Observable<ResponseModel> {
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "Renters/add", renter);
+  }
+  delete(params: HttpParams) {
+    console.log(this.apiUrl + "renters/delete?" + params);
+    return this.httpClient.get<ResponseModel>(this.apiUrl + "renters/delete", { params });
+  }
 }

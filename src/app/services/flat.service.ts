@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
 import { Flat } from '../models/flat';
@@ -10,14 +10,18 @@ import { ResponseModel } from '../models/responseModel';
 })
 export class FlatService {
 
-  apiUrl='https://localhost:44380/api/';
+  apiUrl = 'https://localhost:44380/api/';
 
   constructor(private httpClient: HttpClient) { }
 
-  getFlats():Observable<ListResponseModel<Flat>>{
+  getFlats(): Observable<ListResponseModel<Flat>> {
     return this.httpClient.get<ListResponseModel<Flat>>(this.apiUrl + "flats/getall")
   }
-  add(flat:FlatService):Observable<ResponseModel>{
-		return this.httpClient.post<ResponseModel>(this.apiUrl+"flats/add",flat);
-	}
+  add(flat: FlatService): Observable<ResponseModel> {
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "flats/add", flat);
+  }
+  delete(params: HttpParams) {
+    console.log(this.apiUrl + "flats/delete?" + params);
+    return this.httpClient.get<ResponseModel>(this.apiUrl + "flats/delete", { params });
+  }
 }

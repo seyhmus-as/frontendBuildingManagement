@@ -23,7 +23,7 @@ export class ApartmentService {
     return this.httpClient.post<ResponseModel>(this.apiUrl + "apartments/add", apartment);
   }
   delete(params: HttpParams) {
-    console.log(this.apiUrl + "Apartments/delete?"+params);
-    return this.httpClient.get<ResponseModel>(this.apiUrl + "Apartments/delete",{params});
+    console.log(this.apiUrl + "Apartments/delete?" + params);
+    return this.httpClient.get<ResponseModel>(this.apiUrl + "Apartments/delete", { params });
   }
 }
