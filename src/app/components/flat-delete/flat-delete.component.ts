@@ -4,16 +4,16 @@ import { ToastrService } from 'ngx-toastr';
 import { FlatService } from 'src/app/services/flat.service';
 import { HttpClient, HttpParams } from '@angular/common/http';
 @Component({
-  selector: 'app-flat-delete',
-  templateUrl: './flat-delete.component.html',
-  styleUrls: ['./flat-delete.component.css']
+	selector: 'app-flat-delete',
+	templateUrl: './flat-delete.component.html',
+	styleUrls: ['./flat-delete.component.css']
 })
 
 export class FlatDeleteComponent implements OnInit {
 
 	deletedId?: number
-	params? : HttpParams;
-	
+	params?: HttpParams;
+
 	constructor(
 		private formBuilder: FormBuilder,
 		private flatService: FlatService,
@@ -24,15 +24,11 @@ export class FlatDeleteComponent implements OnInit {
 	}
 
 	delete() {
-		this.params = new HttpParams().set("id",String(this.deletedId));
+		this.params = new HttpParams().set("id", String(this.deletedId));
 		this.flatService.delete(this.params).subscribe(response => {
 			this.toastrService.success(response.message, "Başarılı")
 		}, responseError => {
-			if (responseError.error.Errors.length > 0) {
-				for (let i = 0; i < responseError.error.Errors.length; i++) {
-					this.toastrService.error(responseError.error.Errors[i].ErrorMessage, "Doğrulama hatası")
-				}
-			}
+			this.toastrService.error(responseError.error, "Doğrulama hatası")
 		})
 	}
 }

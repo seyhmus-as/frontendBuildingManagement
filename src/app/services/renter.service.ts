@@ -20,9 +20,9 @@ export class RenterService {
   add(renter: RenterService): Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl + "renters/add", renter);
   }
-  delete(params: HttpParams) {
-    console.log(this.apiUrl + "renters/delete?" + params);
-    return this.httpClient.get<ResponseModel>(this.apiUrl + "renters/delete", { params });
+  delete(id:number) {
+    console.log(this.apiUrl + "renters/delete?"+id);
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "renters/delete?id="+id, null);
   }
   update(renter: RenterService): Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl + "renters/update", renter);

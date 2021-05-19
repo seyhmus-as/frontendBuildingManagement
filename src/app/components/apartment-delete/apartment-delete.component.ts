@@ -29,11 +29,7 @@ export class ApartmentDeleteComponent implements OnInit {
 		this.apartmentService.delete(this.params).subscribe(response => {
 			this.toastrService.success(response.message, "Başarılı")
 		}, responseError => {
-			if (responseError.error.Errors.length > 0) {
-				for (let i = 0; i < responseError.error.Errors.length; i++) {
-					this.toastrService.error(responseError.error.Errors[i].ErrorMessage, "Doğrulama hatası")
-				}
-			}
+			this.toastrService.error(responseError.error, "Doğrulama hatası")
 		})
 	}
 }
