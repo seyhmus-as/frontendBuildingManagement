@@ -1,0 +1,46 @@
+<div *ngIf="dataViewed==false">
+    <div  class="col-md-12">
+        <div  class="card">
+            <div  class="card-header">
+                <h5  class="title">Apartment Get By Id</h5>
+            </div>
+            <div  class="card-body">
+                <div  class="mb-3">
+                    <label  >apartmentId</label>
+                    <input  type="number" [(ngModel)]="viewedId" class="form-control"
+                        placeholder="Type apartmentId for get">
+                </div>
+            </div>
+            <div  class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="getApartmentsById()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="dataViewed==true">
+    <div class="mb-3">
+        <label for="efilterText" class="form-label">Search</label>
+        <input type="text" class="form-control" id="filterText" placeholder="Type for search">
+    </div>
+    <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Apartment id</th>
+                <th>apartment name</th>
+                <th>number Of Flat</th>
+                <th>number Of Floor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let col of [0] ">
+                <td>{{item1}}</td>
+                <td>{{item2| uppercase}}</td>
+                <td>{{item3}}</td>
+                <td>{{item4}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
