@@ -4,12 +4,12 @@ import { ToastrService } from 'ngx-toastr';
 import { CardHistoryService } from 'src/app/services/card-history.service';
 
 @Component({
-  selector: 'app-card-history-add',
-  templateUrl: './card-history-add.component.html',
-  styleUrls: ['./card-history-add.component.css']
+  selector: 'app-card-history-update',
+  templateUrl: './card-history-update.component.html',
+  styleUrls: ['./card-history-update.component.css']
 })
 
-export class CardHistoryAddComponent implements OnInit {
+export class CardHistoryUpdateComponent implements OnInit {
 
 	cardHistoryAddForm!: FormGroup;
 
@@ -22,11 +22,10 @@ export class CardHistoryAddComponent implements OnInit {
 	ngOnInit(): void {
 		this.createCardHistoryAddForm();
 	}
-
 	createCardHistoryAddForm() {
 		
 		this.cardHistoryAddForm = this.formBuilder.group({
-			id: ["0", Validators.required],
+			id: ["", Validators.required],
 			cardId: ["", Validators.required],
 			flatId: ["", Validators.required],
 			date: ["", Validators.required],
@@ -34,10 +33,10 @@ export class CardHistoryAddComponent implements OnInit {
 		})
 	}
 
-	add() {
+	update() {
 		if (this.cardHistoryAddForm.valid) {
 			let cardHistoryModel = Object.assign({}, this.cardHistoryAddForm.value)
-			this.cardHistoryService.add(cardHistoryModel).subscribe(response => {
+			this.cardHistoryService.update(cardHistoryModel).subscribe(response => {
 				this.toastrService.success(response.message, "Başarılı")
 			}, responseError => {
 				if (responseError.error.Errors.length > 0) {

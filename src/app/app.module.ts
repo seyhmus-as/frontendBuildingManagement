@@ -28,6 +28,11 @@ import { CardDeleteComponent } from './components/card-delete/card-delete.compon
 import { CardHistoryDeleteComponent } from './components/card-history-delete/card-history-delete.component';
 import { FlatDeleteComponent } from './components/flat-delete/flat-delete.component';
 import { RenterDeleteComponent } from './components/renter-delete/renter-delete.component';
+import { ApartmentUpdateComponent } from './components/apartment-update/apartment-update.component';
+import { RenterUpdateComponent } from './components/renter-update/renter-update.component';
+import { FlatUpdateComponent } from './components/flat-update/flat-update.component';
+import { CardHistoryUpdateComponent } from './components/card-history-update/card-history-update.component';
+import { CardUpdateComponent } from './components/card-update/card-update.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +58,12 @@ import { RenterDeleteComponent } from './components/renter-delete/renter-delete.
     CardDeleteComponent,
     CardHistoryDeleteComponent,
     FlatDeleteComponent,
-    RenterDeleteComponent
+    RenterDeleteComponent,
+    ApartmentUpdateComponent,
+    RenterUpdateComponent,
+    FlatUpdateComponent,
+    CardHistoryUpdateComponent,
+    CardUpdateComponent
   ],
   imports: [
     BrowserModule,

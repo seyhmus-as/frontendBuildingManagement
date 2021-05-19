@@ -1,0 +1,45 @@
+<div class="content">
+     <div class="col-md-12">
+         <div class="card">
+             <div class="card-header">
+                 <h5 class="title">Apartment Update</h5>
+             </div>
+             <div class="card-body">
+                 <form [formGroup]="apartmentAddForm">
+                     <div class="mb-3">
+                         <label for="apartmentId">apartmentId</label>
+                         <div class="form-group">
+                             <input type="number" id="apartmentId" formControlName="apartmentId"
+                                 class="form-control" placeholder="" />
+                         </div>
+                     </div>
+                     <div class="mb-3">
+                         <label for="apartmentName">apartment Name</label>
+                         <div class="form-group">
+                             <input type="text" id="apartmentName" formControlName="apartmentName" class="form-control"
+                                 placeholder="apartment Name" />
+                         </div>
+                     </div>
+                     <div class="mb-3">
+                         <label for="numberOfFlat">numberOfFlat</label>
+                         <div class="form-group">
+                             <input type="number" id="numberOfFlat" formControlName="numberOfFlat" class="form-control"
+                                 placeholder="numberOfFlat" />
+                         </div>
+                     </div>
+                     <div class="mb-3">
+                         <label for="numberOfFloor">numberOfFloor</label>
+                         <div class="form-group">
+                             <input type="number" id="numberOfFloor" formControlName="numberOfFloor" class="form-control"
+                                 placeholder="numberOfFloor" />
+                         </div>
+                     </div>
+ 
+                 </form>
+             </div>
+             <div class="card-footer">
+                 <button class="btn btn-fill btn-primary" (click)="update()">Ekle</button>
+             </div>
+         </div>
+     </div>
+ </div>

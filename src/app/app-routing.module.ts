@@ -17,6 +17,11 @@ import { CardDeleteComponent } from './components/card-delete/card-delete.compon
 import { FlatDeleteComponent } from './components/flat-delete/flat-delete.component';
 import { CardHistoryDeleteComponent } from './components/card-history-delete/card-history-delete.component';
 import { RenterDeleteComponent } from './components/renter-delete/renter-delete.component';
+import { ApartmentUpdateComponent } from './components/apartment-update/apartment-update.component';
+import { CardUpdateComponent } from './components/card-update/card-update.component';
+import { FlatUpdateComponent } from './components/flat-update/flat-update.component';
+import { CardHistoryUpdateComponent } from './components/card-history-update/card-history-update.component';
+import { RenterUpdateComponent } from './components/renter-update/renter-update.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:ApartmentComponent},
@@ -40,7 +45,12 @@ const routes: Routes = [
   {path: "flats/delete", component: FlatDeleteComponent,canActivate:[LoginGuard]},
   {path: "cardHistories/delete", component: CardHistoryDeleteComponent,canActivate:[LoginGuard]},
   {path: "renters/delete", component: RenterDeleteComponent,canActivate:[LoginGuard]},
-  
+
+  {path: "apartments/update", component: ApartmentUpdateComponent,canActivate:[LoginGuard]},
+  {path: "cards/update", component: CardUpdateComponent,canActivate:[LoginGuard]},
+  {path: "flats/update", component: FlatUpdateComponent,canActivate:[LoginGuard]},
+  {path: "cardHistories/update", component: CardHistoryUpdateComponent,canActivate:[LoginGuard]},
+  {path: "renters/update", component: RenterUpdateComponent,canActivate:[LoginGuard]},
 ];
 
 @NgModule({

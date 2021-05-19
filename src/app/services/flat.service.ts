@@ -24,4 +24,7 @@ export class FlatService {
     console.log(this.apiUrl + "flats/delete?" + params);
     return this.httpClient.get<ResponseModel>(this.apiUrl + "flats/delete", { params });
   }
+  update(flat: FlatService): Observable<ResponseModel> {
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "flats/update", flat);
+  }
 }

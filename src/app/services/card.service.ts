@@ -24,4 +24,7 @@ export class CardService {
     console.log(this.apiUrl + "cards/delete?" + params);
     return this.httpClient.get<ResponseModel>(this.apiUrl + "cards/delete", { params });
   }
+  update(card: CardService): Observable<ResponseModel> {
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "cards/update", card);
+  }
 }

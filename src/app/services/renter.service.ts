@@ -18,10 +18,13 @@ export class RenterService {
     return this.httpClient.get<ListResponseModel<Renter>>(this.apiUrl + "renters/getall")
   }
   add(renter: RenterService): Observable<ResponseModel> {
-    return this.httpClient.post<ResponseModel>(this.apiUrl + "Renters/add", renter);
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "renters/add", renter);
   }
   delete(params: HttpParams) {
     console.log(this.apiUrl + "renters/delete?" + params);
     return this.httpClient.get<ResponseModel>(this.apiUrl + "renters/delete", { params });
+  }
+  update(renter: RenterService): Observable<ResponseModel> {
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "renters/update", renter);
   }
 }
