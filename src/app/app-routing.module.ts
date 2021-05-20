@@ -28,6 +28,10 @@ import { FlatUpdateComponent } from './components/flat-update/flat-update.compon
 import { CardHistoryUpdateComponent } from './components/card-history-update/card-history-update.component';
 import { RenterUpdateComponent } from './components/renter-update/renter-update.component';
 import { ApartmentGetbyidComponent } from './components/apartment-getbyid/apartment-getbyid.component';
+import { CardGetbyidComponent } from './components/card-getbyid/card-getbyid.component';
+import { CardHistoryGetbyidComponent } from './components/card-history-getbyid/card-history-getbyid.component';
+import { FlatGetbyidComponent } from './components/flat-getbyid/flat-getbyid.component';
+import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getbyid.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:ApartmentComponent},
@@ -59,6 +63,10 @@ const routes: Routes = [
   {path: "renters/update", component: RenterUpdateComponent,canActivate:[LoginGuard]},
   
   {path: "apartments/getbyid", component: ApartmentGetbyidComponent,canActivate:[LoginGuard]},
+  {path: "cards/getbyid", component: CardGetbyidComponent,canActivate:[LoginGuard]},
+  {path: "cardHistories/getbyid", component: CardHistoryGetbyidComponent,canActivate:[LoginGuard]},
+  {path: "flats/getbyid", component: FlatGetbyidComponent,canActivate:[LoginGuard]},
+  {path: "renters/getbyid", component: RenterGetbyidComponent,canActivate:[LoginGuard]},
 
 ];
 

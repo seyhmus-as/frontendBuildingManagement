@@ -32,10 +32,10 @@ export class AuthService {
 	}
 	signOut(): void {
 
-		if (localStorage.getItem('token')==null) {
+		if (localStorage.getItem('token') == null) {
 			this.toastrService.info("giriş olmadan çıkış nasıl olacak hele bi söyle")
 		}
-		else{
+		else {
 			localStorage.removeItem('token');
 			this.toastrService.success("You've been logged out");
 			this.router.navigate(['login']);

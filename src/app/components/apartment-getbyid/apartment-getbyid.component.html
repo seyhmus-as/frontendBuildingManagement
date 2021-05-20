@@ -12,24 +12,20 @@
                 </div>
             </div>
             <div  class="card-footer">
-                <button class="btn btn-fill btn-primary" (click)="getApartmentsById()">Delete</button>
+                <button class="btn btn-fill btn-primary" (click)="getApartmentsById()">Get</button>
             </div>
         </div>
     </div>
 </div>
 <div *ngIf="dataViewed==true">
-    <div class="mb-3">
-        <label for="efilterText" class="form-label">Search</label>
-        <input type="text" class="form-control" id="filterText" placeholder="Type for search">
-    </div>
     <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
         <span class="visually-hidden">Loading...</span>
     </div>
     <table class="table">
         <thead>
             <tr>
-                <th>Apartment id</th>
                 <th>apartment name</th>
+                <th>Apartment id</th>
                 <th>number Of Flat</th>
                 <th>number Of Floor</th>
             </tr>

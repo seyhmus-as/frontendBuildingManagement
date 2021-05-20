@@ -1,0 +1,42 @@
+<div *ngIf="dataViewed==false">
+     <div class="col-md-12">
+         <div class="card">
+             <div class="card-header">
+                 <h5 class="title">Flat Get By Id</h5>
+             </div>
+             <div class="card-body">
+                 <div class="mb-3">
+                     <label>flatId</label>
+                     <input type="number" [(ngModel)]="viewedId" class="form-control" placeholder="Type flatId for get">
+                 </div>
+             </div>
+             <div class="card-footer">
+                 <button class="btn btn-fill btn-primary" (click)="getFlatById()">Get</button>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div *ngIf="dataViewed==true">
+     <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+         <span class="visually-hidden">Loading...</span>
+     </div>
+     <table class="table">
+         <thead>
+             <tr>
+                 <th>flatId</th>
+                 <th>apartmentId</th>
+                 <th>priceOfRent</th>
+                 <th>renterId</th>
+                 
+             </tr>
+         </thead>
+         <tbody>
+             <tr *ngFor="let col of [0]">
+                 <td>{{item1}}</td>
+                 <td>{{item2}}</td>
+                 <td>{{item3}}</td>
+                 <td>{{item4}}</td>
+             </tr>
+         </tbody>
+     </table>
+ </div>

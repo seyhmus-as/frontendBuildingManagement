@@ -34,6 +34,10 @@ import { FlatUpdateComponent } from './components/flat-update/flat-update.compon
 import { CardHistoryUpdateComponent } from './components/card-history-update/card-history-update.component';
 import { CardUpdateComponent } from './components/card-update/card-update.component';
 import { ApartmentGetbyidComponent } from './components/apartment-getbyid/apartment-getbyid.component';
+import { CardGetbyidComponent } from './components/card-getbyid/card-getbyid.component';
+import { CardHistoryGetbyidComponent } from './components/card-history-getbyid/card-history-getbyid.component';
+import { FlatGetbyidComponent } from './components/flat-getbyid/flat-getbyid.component';
+import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getbyid.component';
 
 @NgModule({
   declarations: [
@@ -66,8 +70,12 @@ import { ApartmentGetbyidComponent } from './components/apartment-getbyid/apartm
     FlatUpdateComponent,
     CardHistoryUpdateComponent,
     CardUpdateComponent,
-    
-    ApartmentGetbyidComponent
+
+    ApartmentGetbyidComponent,
+    CardGetbyidComponent,
+    CardHistoryGetbyidComponent,
+    FlatGetbyidComponent,
+    RenterGetbyidComponent
   ],
   imports: [
     BrowserModule,

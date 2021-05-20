@@ -1,0 +1,39 @@
+<div *ngIf="dataViewed==false">
+     <div class="col-md-12">
+         <div class="card">
+             <div class="card-header">
+                 <h5 class="title">Renter Get By Id</h5>
+             </div>
+             <div class="card-body">
+                 <div class="mb-3">
+                     <label>renterId</label>
+                     <input type="number" [(ngModel)]="viewedId" class="form-control" placeholder="Type renterId for get">
+                 </div>
+             </div>
+             <div class="card-footer">
+                 <button class="btn btn-fill btn-primary" (click)="getRenterById()">Get</button>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div *ngIf="dataViewed==true">
+     <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+         <span class="visually-hidden">Loading...</span>
+     </div>
+     <table class="table">
+         <thead>
+             <tr>
+                 <th>renterId</th>
+                 <th>firstName</th>
+                 <th>lastName</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr *ngFor="let col of [0]">
+                 <td>{{item1}}</td>
+                 <td>{{item2}}</td>
+                 <td>{{item3}}</td>
+             </tr>
+         </tbody>
+     </table>
+ </div>

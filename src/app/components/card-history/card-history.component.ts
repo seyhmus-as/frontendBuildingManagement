@@ -19,7 +19,7 @@ export class CardHistoryComponent implements OnInit {
   }
 
   getCardHistories() {
-    this.cardHistoryService.getCardHistorys().subscribe(response => {
+    this.cardHistoryService.getCardHistories().subscribe(response => {
       this.cardHistories = response.data;
       this.dataLoaded = true;
     })

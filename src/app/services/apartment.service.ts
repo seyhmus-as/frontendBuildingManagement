@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
 import { Apartment } from '../models/apartment';
 import { ResponseModel } from '../models/responseModel';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { SingleResponseModel } from '../models/singleResponseModel';
 
 @Injectable({
@@ -20,7 +20,7 @@ export class ApartmentService {
   getApartments(): Observable<ListResponseModel<Apartment>> {
     return this.httpClient.get<ListResponseModel<Apartment>>(this.apiUrl + "apartments/getall")
   }
-  getApartmentsById(viewedId: number): Observable<SingleResponseModel<Apartment>>{
+  getApartmentsById(viewedId: number): Observable<SingleResponseModel<Apartment>> {
     return this.httpClient.get<SingleResponseModel<Apartment>>(this.apiUrl + "apartments/getbyid?id=" + viewedId)
   }
   add(apartment: ApartmentService): Observable<ResponseModel> {
