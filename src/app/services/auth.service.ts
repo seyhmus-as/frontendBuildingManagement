@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { LoginModel } from '../models/loginModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
 import { TokenModel } from '../models/tokenModel';
+import { RegisterModel } from '../models/registerModel';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -11,7 +12,6 @@ import { ToastrService } from 'ngx-toastr';
 	providedIn: 'root'
 })
 export class AuthService {
-
 	apiUrl = 'https://localhost:44380/api/auth/';
 	constructor(
 		private httpClient: HttpClient,
@@ -22,6 +22,9 @@ export class AuthService {
 	login(loginModel: LoginModel) {
 		return this.httpClient.post<SingleResponseModel<TokenModel>>(this.apiUrl + "login", loginModel)
 	}
+	register(registerModel: RegisterModel) {
+		return this.httpClient.post<SingleResponseModel<RegisterModel>>(this.apiUrl + "register", registerModel)
+	}
 	isAuthenticated() {
 		if (localStorage.getItem("token")) {
 			return true;
@@ -31,7 +34,6 @@ export class AuthService {
 		}
 	}
 	signOut(): void {
-
 		if (localStorage.getItem('token') == null) {
 			this.toastrService.info("giriş olmadan çıkış nasıl olacak hele bi söyle")
 		}

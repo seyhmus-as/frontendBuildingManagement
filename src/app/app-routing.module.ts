@@ -32,17 +32,19 @@ import { CardGetbyidComponent } from './components/card-getbyid/card-getbyid.com
 import { CardHistoryGetbyidComponent } from './components/card-history-getbyid/card-history-getbyid.component';
 import { FlatGetbyidComponent } from './components/flat-getbyid/flat-getbyid.component';
 import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getbyid.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:ApartmentComponent},
 
   {path:"apartments",component:ApartmentComponent},
-  {path:"flats",component:FlatComponent},
-  {path:"cards",component:CardComponent},
-  {path:"cardHistories",component:CardHistoryComponent},
-  {path:"renters",component:RenterComponent},
+  {path:"flats",component:FlatComponent,canActivate:[LoginGuard]},
+  {path:"cards",component:CardComponent,canActivate:[LoginGuard]},
+  {path:"cardHistories",component:CardHistoryComponent,canActivate:[LoginGuard]},
+  {path:"renters",component:RenterComponent,canActivate:[LoginGuard]},
   
   {path: "login", component: LoginComponent},
+  {path: "register", component: RegisterComponent,canActivate:[LoginGuard]},
 
   {path: "apartments/add", component: ApartmentAddComponent,canActivate:[LoginGuard]},
   {path: "renters/add", component: RenterAddComponent,canActivate:[LoginGuard]},
