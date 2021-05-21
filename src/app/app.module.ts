@@ -41,6 +41,7 @@ import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getby
 import { RegisterComponent } from './components/register/register.component';
 import { ClaimComponent } from './components/claim/claim.component';
 import { ClaimAddComponent } from './components/claim-add/claim-add.component';
+import { ClaimDeleteComponent } from './components/claim-delete/claim-delete.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { ClaimAddComponent } from './components/claim-add/claim-add.component';
     RegisterComponent,
     ClaimComponent,
     ClaimAddComponent,
+    ClaimDeleteComponent,
   ],
   imports: [
     BrowserModule,

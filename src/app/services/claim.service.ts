@@ -18,4 +18,7 @@ export class ClaimService {
   addClaim(operationClaimModel:ClaimService): Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(this.apiUrl + "auth/addclaim",operationClaimModel)
   }
+  delete(id: number) {
+    return this.httpClient.post<ResponseModel>(this.apiUrl + "auth/deleteclaim?id=" + id, null);
+  }
 }

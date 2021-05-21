@@ -37,6 +37,7 @@ import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getby
 import { RegisterComponent } from './components/register/register.component';
 import { ClaimComponent } from './components/claim/claim.component';
 import { ClaimAddComponent } from './components/claim-add/claim-add.component';
+import { ClaimDeleteComponent } from './components/claim-delete/claim-delete.component';
 
 
 
@@ -79,6 +80,7 @@ const routes: Routes = [
 
   {path: "getclaims", component: ClaimComponent,canActivate:[LoginGuard]},
   {path: "addclaim", component: ClaimAddComponent,canActivate:[LoginGuard]},
+  {path: "deleteclaim", component: ClaimDeleteComponent,canActivate:[LoginGuard]},
 
 ];
 
