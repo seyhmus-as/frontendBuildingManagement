@@ -40,6 +40,7 @@ import { FlatGetbyidComponent } from './components/flat-getbyid/flat-getbyid.com
 import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getbyid.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ClaimComponent } from './components/claim/claim.component';
+import { ClaimAddComponent } from './components/claim-add/claim-add.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { ClaimComponent } from './components/claim/claim.component';
     RenterGetbyidComponent,
     RegisterComponent,
     ClaimComponent,
+    ClaimAddComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,124 +1,136 @@
 <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
-  <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-    <svg class="bi me-2" width="30" height="24">
-      <use xlink:href="#bootstrap" />
-    </svg>
-    <span class="fs-5 fw-semibold">Menu</span>
-  </a>
-  <ul class="list-unstyled ps-0">
-    <li>
-      <button
-        class="btn btn-toggle align-items-center rounded"
-        data-bs-toggle="collapse"
-        data-bs-target="#home-collapse" aria-expanded="false">
-        Home
-      </button>
-      <div class="collapse" id="home-collapse">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="#" class="link-dark rounded">Overview</a></li>
-          <li><a href="#" class="link-dark rounded">Updates</a></li>
-          <li><a href="#" class="link-dark rounded">Reports</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="mb-1">
-      <button class="btn btn-toggle align-items-center rounded " data-bs-toggle="collapse"
-        data-bs-target="#apartment-collapse" aria-expanded="false">
-        Aparments
-      </button>
-      <div class="collapse" id="apartment-collapse">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="apartments/add" class="link-dark rounded">Add</a></li>
-          <li><a href="apartments/delete" class="link-dark rounded">Delete</a></li>
-          <li><a href="apartments/update" class="link-dark rounded">Update</a></li>
-          <li><a href="apartments" class="link-dark rounded">View All</a></li>
-          <li><a href="apartments/getbyid" class="link-dark rounded">View by Id</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="mb-1">
-      <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
-        data-bs-target="#flat-collapse" aria-expanded="false">
-        Flats
-      </button>
-      <div class="collapse" id="flat-collapse">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="flats/add" class="link-dark rounded">Add</a></li>
-          <li><a href="flats/delete" class="link-dark rounded">Delete</a></li>
-          <li><a href="flats/update" class="link-dark rounded">Update</a></li>
-          <li><a href="flats" class="link-dark rounded">View All</a></li>
-          <li><a href="flats/getbyid" class="link-dark rounded">View by Id</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="mb-1">
-      <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
-        data-bs-target="#renter-collapse" aria-expanded="false">
-        Renters
-      </button>
-      <div class="collapse" id="renter-collapse">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="renters/add" class="link-dark rounded">Add</a></li>
-          <li><a href="renters/delete" class="link-dark rounded">Delete</a></li>
-          <li><a href="renters/update" class="link-dark rounded">Update</a></li>
-          <li><a href="renters" class="link-dark rounded">View All</a></li>
-          <li><a href="renters/getbyid" class="link-dark rounded">View by Id</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="mb-1">
-      <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
-        data-bs-target="#card-collapse" aria-expanded="false">
-        Cards
-      </button>
-      <div class="collapse" id="card-collapse">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="cards/add" class="link-dark rounded">Add</a></li>
-          <li><a href="cards/delete" class="link-dark rounded">Delete</a></li>
-          <li><a href="cards/update" class="link-dark rounded">Update</a></li>
-          <li><a href="cards" class="link-dark rounded">View All</a></li>
-          <li><a href="cards/getbyid" class="link-dark rounded">View by Id</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="mb-1">
-      <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#cardHistory-collapse" aria-expanded="false">
-        Card Histories
-      </button>
-      <div class="collapse" id="cardHistory-collapse">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="cardHistories/add" class="link-dark rounded">Add</a></li>
-          <li><a href="cardHistories/delete" class="link-dark rounded">Delete</a></li>
-          <li><a href="cardHistories/update" class="link-dark rounded">Update</a></li>
-          <li><a href="cardHistories" class="link-dark rounded">View All</a></li>
-          <li><a href="cardHistories/getbyid" class="link-dark rounded">View by Id</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="border-top my-3"></li>
-    <li class="mb-1">
-      <button *ngIf="login==false"  class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-        data-bs-target="#account-collapse" aria-expanded="false">
-        Account
-      </button>
-      <button *ngIf="login==true" class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-        data-bs-target="#account-collapse" aria-expanded="false">
-        Aacccc
-      </button>
-      <div class="collapse" id="account-collapse">
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="login" class="link-dark rounded">Login</a></li>
-        </ul>
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a href="register" class="link-dark rounded">Register</a></li>
-        </ul>
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a  (click)="signout()" class="link-dark rounded">Sign Out</a></li>
-        </ul>
-        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a  href="getclaims" class="link-dark rounded">GetClaims</a></li>
-        </ul>
-      </div>
-    </li>
-  </ul>
+	<a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+		<svg class="bi me-2" width="30" height="24">
+			<use xlink:href="#bootstrap" />
+		</svg>
+		<span class="fs-5 fw-semibold">Menu</span>
+	</a>
+	<ul class="list-unstyled ps-0">
+		<li>
+			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+				data-bs-target="#home-collapse" aria-expanded="false">
+				Home
+			</button>
+			<div class="collapse" id="home-collapse">
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a href="#" class="link-dark rounded">Overview</a></li>
+					<li><a href="#" class="link-dark rounded">Updates</a></li>
+					<li><a href="#" class="link-dark rounded">Reports</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded " data-bs-toggle="collapse"
+				data-bs-target="#apartment-collapse" aria-expanded="false">
+				Aparments
+			</button>
+			<div class="collapse" id="apartment-collapse">
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a href="apartments/add" class="link-dark rounded">Add</a></li>
+					<li><a href="apartments/delete" class="link-dark rounded">Delete</a></li>
+					<li><a href="apartments/update" class="link-dark rounded">Update</a></li>
+					<li><a href="apartments" class="link-dark rounded">View All</a></li>
+					<li><a href="apartments/getbyid" class="link-dark rounded">View by Id</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+				data-bs-target="#flat-collapse" aria-expanded="false">
+				Flats
+			</button>
+			<div class="collapse" id="flat-collapse">
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a href="flats/add" class="link-dark rounded">Add</a></li>
+					<li><a href="flats/delete" class="link-dark rounded">Delete</a></li>
+					<li><a href="flats/update" class="link-dark rounded">Update</a></li>
+					<li><a href="flats" class="link-dark rounded">View All</a></li>
+					<li><a href="flats/getbyid" class="link-dark rounded">View by Id</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+				data-bs-target="#renter-collapse" aria-expanded="false">
+				Renters
+			</button>
+			<div class="collapse" id="renter-collapse">
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a href="renters/add" class="link-dark rounded">Add</a></li>
+					<li><a href="renters/delete" class="link-dark rounded">Delete</a></li>
+					<li><a href="renters/update" class="link-dark rounded">Update</a></li>
+					<li><a href="renters" class="link-dark rounded">View All</a></li>
+					<li><a href="renters/getbyid" class="link-dark rounded">View by Id</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+				data-bs-target="#card-collapse" aria-expanded="false">
+				Cards
+			</button>
+			<div class="collapse" id="card-collapse">
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a href="cards/add" class="link-dark rounded">Add</a></li>
+					<li><a href="cards/delete" class="link-dark rounded">Delete</a></li>
+					<li><a href="cards/update" class="link-dark rounded">Update</a></li>
+					<li><a href="cards" class="link-dark rounded">View All</a></li>
+					<li><a href="cards/getbyid" class="link-dark rounded">View by Id</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse"
+				data-bs-target="#cardHistory-collapse" aria-expanded="false">
+				Card Histories
+			</button>
+			<div class="collapse" id="cardHistory-collapse">
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a href="cardHistories/add" class="link-dark rounded">Add</a></li>
+					<li><a href="cardHistories/delete" class="link-dark rounded">Delete</a></li>
+					<li><a href="cardHistories/update" class="link-dark rounded">Update</a></li>
+					<li><a href="cardHistories" class="link-dark rounded">View All</a></li>
+					<li><a href="cardHistories/getbyid" class="link-dark rounded">View by Id</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="border-top my-3"></li>
+		<li class="mb-1">
+			<button *ngIf="login==false" class="btn btn-toggle align-items-center rounded collapsed"
+				data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+				Account
+			</button>
+			<button *ngIf="login==true" class="btn btn-toggle align-items-center rounded collapsed"
+				data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+				Aacccc
+			</button>
+			<div class="collapse" id="account-collapse">
+				<li class="mb-1">
+					<button *ngIf="login==false" class="btn btn-toggle align-items-center rounded collapsed"
+						data-bs-toggle="collapse" data-bs-target="#account-collapse-deep" aria-expanded="false">
+						Claims
+					</button>
+					<div class="collapse" id="account-collapse-deep">
+
+						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+							<li><a href="getclaims" class="link-dark rounded">GetClaims</a></li>
+						</ul>
+						<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+							<li><a href="addclaim" class="link-dark rounded">AddClaim</a></li>
+						</ul>
+					</div>
+				</li>
+		<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+			<li><a href="login" class="link-dark rounded">Login</a></li>
+		</ul>
+		<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+			<li><a href="register" class="link-dark rounded">Register</a></li>
+		</ul>
+		<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+			<li><a (click)="signout()" class="link-dark rounded">Sign Out</a></li>
+		</ul>
+
+</div>
+</li>
+</ul>
 </div>
