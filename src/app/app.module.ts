@@ -39,9 +39,6 @@ import { CardHistoryGetbyidComponent } from './components/card-history-getbyid/c
 import { FlatGetbyidComponent } from './components/flat-getbyid/flat-getbyid.component';
 import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getbyid.component';
 import { RegisterComponent } from './components/register/register.component';
-import { ClaimComponent } from './components/claim/claim.component';
-import { ClaimAddComponent } from './components/claim-add/claim-add.component';
-import { ClaimDeleteComponent } from './components/claim-delete/claim-delete.component';
 
 @NgModule({
   declarations: [
@@ -80,10 +77,7 @@ import { ClaimDeleteComponent } from './components/claim-delete/claim-delete.com
     CardHistoryGetbyidComponent,
     FlatGetbyidComponent,
     RenterGetbyidComponent,
-    RegisterComponent,
-    ClaimComponent,
-    ClaimAddComponent,
-    ClaimDeleteComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
