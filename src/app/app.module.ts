@@ -39,6 +39,7 @@ import { CardHistoryGetbyidComponent } from './components/card-history-getbyid/c
 import { FlatGetbyidComponent } from './components/flat-getbyid/flat-getbyid.component';
 import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getbyid.component';
 import { RegisterComponent } from './components/register/register.component';
+import { UserOperationClaimComponent } from './components/user-operation-claim/user-operation-claim.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { RegisterComponent } from './components/register/register.component';
     CardHistoryGetbyidComponent,
     FlatGetbyidComponent,
     RenterGetbyidComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserOperationClaimComponent
   ],
   imports: [
     BrowserModule,
