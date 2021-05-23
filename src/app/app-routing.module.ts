@@ -37,6 +37,9 @@ import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getby
 import { RegisterComponent } from './components/register/register.component';
 import { UserOperationClaimComponent } from './components/user-operation-claim/user-operation-claim.component';
 
+import { FlatGetdetailsComponent } from './components/flat-getdetails/flat-getdetails.component';
+
+
 
 const routes: Routes = [
   {path:"",pathMatch:"full",component:ApartmentComponent,canActivate:[LoginGuard]},
@@ -75,6 +78,7 @@ const routes: Routes = [
   {path: "renters/getbyid", component: RenterGetbyidComponent,canActivate:[LoginGuard]},
 
   {path: "userclaims", component: UserOperationClaimComponent,canActivate:[LoginGuard]},
+  {path: "flats/getdetails", component: FlatGetdetailsComponent,canActivate:[LoginGuard]},
 ];
 
 @NgModule({
