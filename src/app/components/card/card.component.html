@@ -1,6 +1,6 @@
 <div class="mb-3">
      <label for="efilterText" class="form-label">Search</label>
-     <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Type for search">
+     <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="type for search">
 </div>
 
 <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
@@ -9,15 +9,15 @@
 <table class="table">
      <thead>
           <tr>
-               <th>Card ıd</th>
-               <th>card name </th>
-               <th>IsIncome</th>
+               <th>Card Id</th>
+               <th>Card Name </th>
+               <th>Is Income</th>
           </tr>
      </thead>
      <tbody>
           <tr *ngFor="let item of cards">
                <td>{{item.cardId}}</td>
-               <td>{{item.name}}</td>
+               <td>{{item.name | uppercase}}</td>
                <td>{{item.isIncome}}</td>
           </tr>
      </tbody>

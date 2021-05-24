@@ -38,7 +38,7 @@ export class CardHistoryGetmonthlymoneybyidComponent implements OnInit {
       this.secondFinal == null ||
       this.flatId == null ||
       this.isIncome == null
-    ) { this.toastrService.error("form eksik"); return; }
+    ) { this.toastrService.error("Missing Form","Warning"); return; }
 
     this.dataViewed = true;
     this.cardHistoryService.getMonthlyMoneyById(

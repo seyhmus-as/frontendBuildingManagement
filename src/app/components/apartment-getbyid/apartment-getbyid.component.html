@@ -1,17 +1,17 @@
 <div *ngIf="dataViewed==false">
-    <div  class="col-md-12">
-        <div  class="card">
-            <div  class="card-header">
-                <h5  class="title">Apartment Get By Id</h5>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">Get Apartment By Id</h5>
             </div>
-            <div  class="card-body">
-                <div  class="mb-3">
-                    <label  >apartmentId</label>
-                    <input  type="number" [(ngModel)]="viewedId" class="form-control"
-                        placeholder="Type apartmentId for get">
+            <div class="card-body">
+                <div class="mb-3">
+                    <label>Apartment Id</label>
+                    <input type="number" [(ngModel)]="viewedId" class="form-control"
+                        placeholder="type apartment id">
                 </div>
             </div>
-            <div  class="card-footer">
+            <div class="card-footer">
                 <button class="btn btn-fill btn-primary" (click)="getApartmentsById()">Get</button>
             </div>
         </div>
@@ -24,10 +24,10 @@
     <table class="table">
         <thead>
             <tr>
-                <th>apartment name</th>
-                <th>Apartment id</th>
-                <th>number Of Flat</th>
-                <th>number Of Floor</th>
+                <th>Apartment Name</th>
+                <th>Apartment Id</th>
+                <th>Number of Flat</th>
+                <th>Number of Floor</th>
             </tr>
         </thead>
         <tbody>

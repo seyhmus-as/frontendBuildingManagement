@@ -22,13 +22,13 @@ export class ApartmentDeleteComponent implements OnInit {
 
 	delete() {
 		if (this.deletedId == null) {
-			this.toastrService.error("number girmediniz");
+			this.toastrService.error("Missing Form","Warning");
 			return;
 		}
 		this.apartmentService.delete(this.deletedId).subscribe(response => {
-			this.toastrService.success(response.message, "Başarılı")
+			this.toastrService.success(response.message, "Success")
 		}, responseError => {
-			this.toastrService.error(responseError.error, "Doğrulama hatası")
+			this.toastrService.error(responseError.error, "Validation Error")
 		})
 	}
 }

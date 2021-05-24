@@ -35,12 +35,12 @@ export class RegisterComponent implements OnInit {
       let registerModel = Object.assign({}, this.registerForm.value)
 
       this.authService.register(registerModel).subscribe(response => {
-        this.toastrService.success(response.message, "Register Başarılı")
+        this.toastrService.success(response.message, "Success Register")
       }, responseError => {
-        this.toastrService.error(responseError.error, "Doğrulama veya Yetki Hatası")
+        this.toastrService.error(responseError.error, "Validation or Authentication Error")
       })
     } else {
-      this.toastrService.error("form eksik", "dikkat");
+      this.toastrService.error("Missing Form","Warning");
     }
   }
 

@@ -2,12 +2,12 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="title">Card Get By Id</h5>
+                <h5 class="title">Get Card By Id</h5>
             </div>
             <div class="card-body">
                 <div class="mb-3">
-                    <label>cardId</label>
-                    <input type="number" [(ngModel)]="viewedId" class="form-control" placeholder="Type cardId for get">
+                    <label>Card Id</label>
+                    <input type="number" [(ngModel)]="viewedId" class="form-control" placeholder="type card id">
                 </div>
             </div>
             <div class="card-footer">
@@ -23,15 +23,15 @@
     <table class="table">
         <thead>
             <tr>
-                <th>card id</th>
-                <th>card name</th>
-                <th>isIncome</th>
+                <th>Card Id</th>
+                <th>Card Name</th>
+                <th>Is Income</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let col of [0]">
                 <td>{{item1}}</td>
-                <td>{{item2| uppercase}}</td>
+                <td>{{item2 | uppercase}}</td>
                 <td>{{item3}}</td>
             </tr>
         </tbody>

@@ -34,7 +34,7 @@ export class CardHistoryGetmonthlytotalmoneybyidComponent implements OnInit {
       this.secondBegin == null ||
       this.secondFinal == null ||
       this.isIncome == null
-    ) { this.toastrService.error("form eksik"); return; }
+    ) { this.toastrService.error("Missing Form","Warning"); return; }
 
     this.dataViewed = true;
     this.cardHistoryService.getMonthlyTotalMoneyById(

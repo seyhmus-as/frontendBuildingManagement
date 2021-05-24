@@ -22,13 +22,13 @@ export class UserDeleteComponent implements OnInit {
 
 	delete() {
 		if (this.deletedEmail == null) {
-			this.toastrService.error("number girmediniz");
+			this.toastrService.error("Missing Form","Warning");
 			return;
 		}
 		this.userService.delete(this.deletedEmail).subscribe(response => {
-			this.toastrService.success(response.message, "Başarılı")
+			this.toastrService.success(response.message, "Success")
 		}, responseError => {
-			this.toastrService.error(responseError.error, "Doğrulama hatası")
+			this.toastrService.error(responseError.error, "Validation Error")
 		})
 	}
 }

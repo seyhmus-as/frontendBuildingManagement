@@ -2,43 +2,43 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h5 class="title">Flat Add</h5>
+                <h5 class="title">Add Flat</h5>
             </div>
             <div class="card-body">
                 <form [formGroup]="flatAddForm">
                     <div class="mb-3">
-                        <label for="flatId">flatId</label>
+                        <label for="flatId">Flat Id</label>
                         <div class="form-group">
                             <input type="number" id="flatId" formControlName="flatId" class="form-control"
-                                placeholder="flatId" />
+                                placeholder="type flat id" />
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="apartmentId">apartmentId</label>
+                        <label for="apartmentId">Apartment Id</label>
                         <div class="form-group">
                             <input type="number" id="apartmentId" formControlName="apartmentId" class="form-control"
-                                placeholder="apartmentId" />
+                                placeholder="type apartment id" />
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="priceOfRent">priceOfRent</label>
+                        <label for="priceOfRent">Price of Rent</label>
                         <div class="form-group">
                             <input type="number" id="priceOfRent" formControlName="priceOfRent" class="form-control"
-                                placeholder="priceOfRent" />
+                                placeholder="type price of rent" />
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="renterId">renterId</label>
+                        <label for="renterId">Renter Id</label>
                         <div class="form-group">
                             <input type="number" id="renterId" formControlName="renterId" class="form-control"
-                                placeholder="renterId" />
+                                placeholder="type renter id" />
                         </div>
                     </div>
 
                 </form>
             </div>
             <div class="card-footer">
-                <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+                <button class="btn btn-fill btn-primary" (click)="add()">Add</button>
             </div>
         </div>
     </div>

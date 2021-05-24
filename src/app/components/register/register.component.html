@@ -1,28 +1,28 @@
 <body class="text-center">
   <main class="form-signin">
     <form [formGroup]="registerForm">
-      <h1 class="h3 mb-3 fw-normal">register</h1>
+      <h1 class="h3 mb-3 fw-normal">Register</h1>
 
       <div class="form-floating">
         <input formControlName="email" type="email" class="form-control" placeholder="name@example.com" />
-        <label for="floatingInput">E-posta</label>
+        <label for="floatingInput">E-mail</label>
       </div>
       <br>
       <div class="form-floating">
         <input formControlName="firstname" type="text" class="form-control" placeholder="Firstname" />
-        <label for="floatingInput">Firstname</label>
+        <label for="floatingInput">First Name</label>
       </div>
 
       <br>
       <div class="form-floating">
         <input formControlName="lastname" type="text" class="form-control" placeholder="Lastname" />
-        <label for="floatingInput">Lastname</label>
+        <label for="floatingInput">Last Name</label>
       </div>
 
       <br>
       <div class="form-floating">
         <input formControlName="password" type="password" class="form-control" placeholder="Password" />
-        <label for="floatingPassword">Parola</label>
+        <label for="floatingPassword">Password</label>
       </div>
 
       <br>
@@ -34,7 +34,7 @@
 
       <br>
       <button class="w-100 btn btn-lg btn-primary" (click)="register()">
-        Giriş yap
+        Login
       </button>
       <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
     </form>

@@ -2,43 +2,43 @@
      <div class="col-md-12">
          <div class="card">
              <div class="card-header">
-                 <h5 class="title">Apartment Update</h5>
+                 <h5 class="title">Update Apartment</h5>
              </div>
              <div class="card-body">
                  <form [formGroup]="apartmentAddForm">
                      <div class="mb-3">
-                         <label for="apartmentId">apartmentId</label>
+                         <label for="apartmentId">Apartment Id</label>
                          <div class="form-group">
                              <input type="number" id="apartmentId" formControlName="apartmentId"
-                                 class="form-control" placeholder="" />
+                                 class="form-control" placeholder="type apartment id" />
                          </div>
                      </div>
                      <div class="mb-3">
-                         <label for="apartmentName">apartment Name</label>
+                         <label for="apartmentName">Apartment Name</label>
                          <div class="form-group">
                              <input type="text" id="apartmentName" formControlName="apartmentName" class="form-control"
-                                 placeholder="apartment Name" />
+                                 placeholder="type apartment name" />
                          </div>
                      </div>
                      <div class="mb-3">
-                         <label for="numberOfFlat">numberOfFlat</label>
+                         <label for="numberOfFlat">Number of Flat</label>
                          <div class="form-group">
                              <input type="number" id="numberOfFlat" formControlName="numberOfFlat" class="form-control"
-                                 placeholder="numberOfFlat" />
+                                 placeholder="type number of flat" />
                          </div>
                      </div>
                      <div class="mb-3">
-                         <label for="numberOfFloor">numberOfFloor</label>
+                         <label for="numberOfFloor">Number of Floor</label>
                          <div class="form-group">
                              <input type="number" id="numberOfFloor" formControlName="numberOfFloor" class="form-control"
-                                 placeholder="numberOfFloor" />
+                                 placeholder="type number of floor" />
                          </div>
                      </div>
  
                  </form>
              </div>
              <div class="card-footer">
-                 <button class="btn btn-fill btn-primary" (click)="update()">Ekle</button>
+                 <button class="btn btn-fill btn-primary" (click)="update()">Update</button>
              </div>
          </div>
      </div>

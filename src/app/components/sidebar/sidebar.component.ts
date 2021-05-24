@@ -7,13 +7,11 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-  login: boolean
   constructor(
     private authService: AuthService
   ) { }
 
   ngOnInit(): void {
-    this.login = false;
   }
   signout() {
     this.authService.signOut();

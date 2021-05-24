@@ -1,32 +1,32 @@
 <div class="col-md-12">
     <div class="card">
         <div class="card-header">
-            <h5 class="title">Get total money between interval of flatId</h5>
+            <h5 class="title">Get Total Money Between Time Interval of a Flat</h5>
         </div>
         <div class="card-body">
             <div class="mb-3">
-                <label>flat Id</label>
-                <input type="number" [(ngModel)]="flatId" class="form-control" placeholder="Type flatId">
+                <label>Flat Id</label>
+                <input type="number" [(ngModel)]="flatId" class="form-control" placeholder="type flat id">
             </div>
         </div>
         <div class="card-body">
             <div class="mb-3">
-                <label>secondBegin</label>
-                <input type="number" [(ngModel)]="secondBegin" class="form-control" placeholder="Type secondBegin">
-            </div>
-        </div>
-
-        <div class="card-body">
-            <div class="mb-3">
-                <label>secondFinal</label>
-                <input type="number" [(ngModel)]="secondFinal" class="form-control" placeholder="Type secondFinal">
+                <label>Begin Second</label>
+                <input type="number" [(ngModel)]="secondBegin" class="form-control" placeholder="type begin second">
             </div>
         </div>
 
         <div class="card-body">
             <div class="mb-3">
-                <label>isIncome</label>
-                <input type="boolean" [(ngModel)]="isIncome" class="form-control" placeholder="Type isIncome">
+                <label>Final Second</label>
+                <input type="number" [(ngModel)]="secondFinal" class="form-control" placeholder="type final second">
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="mb-3">
+                <label>is Income</label>
+                <input type="boolean" [(ngModel)]="isIncome" class="form-control" placeholder="type is income">
             </div>
         </div>
         <div class="card-footer">
@@ -42,7 +42,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>total money</th>
+                <th>Total Money</th>
             </tr>
         </thead>
         <tbody>

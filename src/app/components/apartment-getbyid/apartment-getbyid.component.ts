@@ -14,7 +14,6 @@ export class ApartmentGetbyidComponent implements OnInit {
   dataLoaded = false;
   dataViewed = false;
 
-
   item1?: string
   item2?: string
   item3?: string
@@ -30,7 +29,7 @@ export class ApartmentGetbyidComponent implements OnInit {
 
   getApartmentsById() {
     if (this.viewedId == null) {
-      this.toastrService.error("number girmediniz");
+      this.toastrService.error("Missing Form","Warning");
       return;
     }
     this.dataViewed = true;

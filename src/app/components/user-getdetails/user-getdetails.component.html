@@ -1,6 +1,6 @@
 <div class="mb-3">
      <label for="efilterText" class="form-label">Search</label>
-     <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Type for search">
+     <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="type for search">
  </div>
  <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
      <span class="visually-hidden">Loading...</span>
@@ -8,12 +8,12 @@
  <table class="table">
      <thead>
           <tr>
-               <th>userId</th>
-               <th>firstName</th>
-               <th>lastName</th>
-               <th>email</th>
-               <th>operationClaimId</th>
-               <th>operationName</th>
+               <th>User Id</th>
+               <th>First Name</th>
+               <th>Last Name</th>
+               <th>Email</th>
+               <th>Operation Claim Id</th>
+               <th>Operation Name</th>
           </tr>
      </thead>
      <tbody>

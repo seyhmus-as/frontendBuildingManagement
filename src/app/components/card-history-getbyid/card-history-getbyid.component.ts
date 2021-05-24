@@ -30,7 +30,7 @@ export class CardHistoryGetbyidComponent implements OnInit {
 
   getCardHistoryById() {
     if (this.viewedId == null) {
-      this.toastrService.error("number girmediniz");
+      this.toastrService.error("Missing Form","Warning");
       return;
     }
     this.dataViewed = true;

@@ -29,7 +29,7 @@ export class FlatGetbyidComponent implements OnInit {
 
   getFlatById() {
     if (this.viewedId == null) {
-      this.toastrService.error("number girmediniz");
+      this.toastrService.error("Missing Form","Warning");
       return;
     }
     this.dataViewed = true;

@@ -7,21 +7,21 @@
              <div class="card-body">
                  <form [formGroup]="cardUpdateForm">
                      <div class="mb-3">
-                         <label for="cardId">cardId</label>
+                         <label for="cardId">Card Id</label>
                          <div class="form-group">
                              <input type="number" id="cardId" formControlName="cardId" class="form-control"
-                                 placeholder="" />
+                                 placeholder="type card id" />
                          </div>
                      </div>
                      <div class="mb-3">
-                         <label for="name">card Name</label>
+                         <label for="name">Card Name</label>
                          <div class="form-group">
                              <input type="text" id="name" formControlName="name" class="form-control"
-                                 placeholder="card Name"/>
+                                 placeholder="type card name"/>
                          </div>
                      </div>
                      <div class="mb-3">
-                         <label for="isIncome">isIncome</label>
+                         <label for="isIncome">Is Income</label>
                          <div class="form-group">
                              <div class="form-check form-switch">
                                  <input id="isIncome" formControlName="isIncome" class="form-check-input" type="checkbox"
@@ -33,7 +33,7 @@
                  </form>
              </div>
              <div class="card-footer">
-                 <button class="btn btn-fill btn-primary" (click)="update()">Ekle</button>
+                 <button class="btn btn-fill btn-primary" (click)="update()">Update</button>
              </div>
          </div>
      </div>

@@ -37,16 +37,16 @@ export class CardHistoryUpdateComponent implements OnInit {
 		if (this.cardHistoryAddForm.valid) {
 			let cardHistoryModel = Object.assign({}, this.cardHistoryAddForm.value)
 			this.cardHistoryService.update(cardHistoryModel).subscribe(response => {
-				this.toastrService.success(response.message, "Başarılı")
+				this.toastrService.success(response.message, "Success")
 			}, responseError => {
 				if (responseError.error.Errors.length > 0) {
 					for (let i = 0; i < responseError.error.Errors.length; i++) {
-						this.toastrService.error(responseError.error.Errors[i].ErrorMessage, "Doğrulama hatası")
+						this.toastrService.error(responseError.error.Errors[i].ErrorMessage, "Validation Error")
 					}
 				}
 			})
 		} else {
-			this.toastrService.error("form eksik", "dikkat");
+			this.toastrService.error("Missing Form","Warning");
 		}
 	}
 }

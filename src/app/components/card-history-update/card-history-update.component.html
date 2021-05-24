@@ -2,7 +2,7 @@
      <div class="col-md-12">
          <div class="card">
              <div class="card-header">
-                 <h5 class="title">Card History Add</h5>
+                 <h5 class="title">Add Card History </h5>
              </div>
              <div class="card-body">
                  <form [formGroup]="cardHistoryAddForm">
@@ -10,42 +10,42 @@
                          <label for="id">Id</label>
                          <div class="form-group">
                              <input type="number" id="id" formControlName="id" class="form-control"
-                                 placeholder="updated id" />
+                                 placeholder="type updated id" />
                          </div>
                      </div>
                      <div class="mb-3">
-                         <label for="cardId">cardId</label>
+                         <label for="cardId">Card Id</label>
                          <div class="form-group">
                              <input type="number" id="cardId" formControlName="cardId" class="form-control"
-                                 placeholder="cardId" />
+                                 placeholder="type card id" />
                          </div>
                      </div>
                      <div class="mb-3">
-                         <label for="flatId">flatId</label>
+                         <label for="flatId">Flat Id</label>
                          <div class="form-group">
                              <input type="number" id="flatId" formControlName="flatId" class="form-control"
-                                 placeholder="flatId" />
+                                 placeholder="type flat id" />
                          </div>
                      </div>
                      <div class="mb-3">
-                         <label for="date">date</label>
+                         <label for="date">Date</label>
                          <div class="form-group">
                              <input type="datetime-local" id="date" formControlName="date" class="form-control"
-                                 placeholder="date" />
+                                 placeholder="type date" />
                          </div>
                      </div>
                      <div class="mb-3">
-                         <label for="price">price</label>
+                         <label for="price">Price</label>
                          <div class="form-group">
                              <input type="number" id="price" formControlName="price" class="form-control"
-                                 placeholder="price" />
+                                 placeholder="type price" />
                          </div>
                      </div>
  
                  </form>
              </div>
              <div class="card-footer">
-                 <button class="btn btn-fill btn-primary" (click)="update()">Ekle</button>
+                 <button class="btn btn-fill btn-primary" (click)="update()">Update</button>
              </div>
          </div>
      </div>

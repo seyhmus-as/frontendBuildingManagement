@@ -23,7 +23,7 @@ export class LoginGuard implements CanActivate {
 				return true;
 			}else{
 				this.router.navigate(["login"])
-				this.toastrService.info("izin yok, giriş yapmalısın")
+				this.toastrService.info("No Permission, Login Required")
 				return false;
 			}
 

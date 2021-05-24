@@ -30,22 +30,17 @@ export class CardHistoryGetmonthlymoneyComponent implements OnInit {
   }
 
   getMonthlyMoney() {
-    if (this.secondBegin == null ||
-        this.secondFinal == null ||
+    if (this.secondBegin == null  ||
+        this.secondFinal == null    ||
         this.isIncome == null
-      )
-      {this.toastrService.error("number girmediniz");return;}
+    ) { this.toastrService.error("Missing Form", "Warning"); return; }
 
     this.dataViewed = true;
-    this.cardHistoryService.getMonthlyMoney(
-          this.secondBegin,
-          this.secondFinal,
-          this.isIncome,
-      ).subscribe(response => {
-      this.totalMoney = response.data;
-      this.dataLoaded = true;
-
-      this.item1 = String(this.totalMoney);
-    })
+    this.cardHistoryService.getMonthlyMoney(this.secondBegin,this.secondFinal,this.isIncome)
+        .subscribe(response => {
+        this.totalMoney = response.data;
+        this.dataLoaded = true;
+        this.item1 = String(this.totalMoney);
+        })
   }
 }

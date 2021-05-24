@@ -4,9 +4,9 @@ import { ToastrService } from 'ngx-toastr';
 import { CardService } from 'src/app/services/card.service';
 
 @Component({
-  selector: 'app-card-add',
-  templateUrl: './card-add.component.html',
-  styleUrls: ['./card-add.component.css']
+	selector: 'app-card-add',
+	templateUrl: './card-add.component.html',
+	styleUrls: ['./card-add.component.css']
 })
 
 export class CardAddComponent implements OnInit {
@@ -35,16 +35,16 @@ export class CardAddComponent implements OnInit {
 		if (this.cardAddForm.valid) {
 			let cardModel = Object.assign({}, this.cardAddForm.value)
 			this.cardService.add(cardModel).subscribe(response => {
-				this.toastrService.success(response.message, "Başarılı")
+				this.toastrService.success(response.message, "Success")
 			}, responseError => {
 				if (responseError.error.Errors.length > 0) {
 					for (let i = 0; i < responseError.error.Errors.length; i++) {
-						this.toastrService.error(responseError.error.Errors[i].ErrorMessage, "Doğrulama hatası")
+						this.toastrService.error(responseError.error.Errors[i].ErrorMessage, "Validation Error")
 					}
 				}
 			})
 		} else {
-			this.toastrService.error("form eksik", "dikkat");
+			this.toastrService.error("Missing Form", "Warning");
 		}
 	}
 }

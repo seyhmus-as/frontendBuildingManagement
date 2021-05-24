@@ -1,11 +1,11 @@
 <div class="content">
      <div class="col-md-12">
          <div class="card">
-             <div class="card-header"><h5 class="title">UserOperationClaim Add</h5></div>
+             <div class="card-header"><h5 class="title">Add UserOperationClaim</h5></div>
              <div class="card-body">
                  <form [formGroup]="userOperationClaimAddForm">
                     <div class="mb-3">
-                        <label for="id">id</label>
+                        <label for="id">Id</label>
                         <div class="form-group">
                             <input
                             readonly
@@ -16,27 +16,27 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="userId">user Id</label>
+                        <label for="userId">User Id</label>
                         <div class="form-group">
                             <input type="number" 
                             id="userId" 
                             formControlName="userId" class="form-control" 
-                            placeholder="userId"/>
+                            placeholder="type user id"/>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="operationClaimId">operationClaimId</label>
+                        <label for="operationClaimId">Operation Claim Id</label>
                         <div class="form-group">
                             <input type="number" 
                             id="operationClaimId" 
                             formControlName="operationClaimId" class="form-control" 
-                            placeholder="operationClaimId"/>
+                            placeholder="type operation claim id"/>
                         </div>
                     </div>
                  </form>
              </div>
              <div class="card-footer">
-                 <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+                 <button class="btn btn-fill btn-primary" (click)="add()">Add</button>
              </div>
          </div>
      </div>
