@@ -1,0 +1,31 @@
+<div class="mb-3">
+     <label for="efilterText" class="form-label">Search</label>
+     <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Type for search">
+ </div>
+ <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+     <span class="visually-hidden">Loading...</span>
+ </div>
+ <table class="table">
+     <thead>
+          <tr>
+               <th>id</th>
+               <th>card id</th>
+               <th>flat id</th>
+               <th>date</th>
+               <th>price</th>
+               <th>name</th>
+               <th>isIncome</th>
+          </tr>
+     </thead>
+     <tbody>
+          <tr *ngFor="let item of cardHistoryDetails">
+               <td>{{item.id}}</td>
+               <td>{{item.cardId}}</td>
+               <td>{{item.flatId}}</td>
+               <td>{{item.date}}</td>
+               <td>{{item.price}}</td>
+               <td>{{item.name}}</td>
+               <td>{{item.isIncome}}</td>
+          </tr>
+     </tbody>
+ </table>

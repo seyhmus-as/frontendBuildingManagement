@@ -1,0 +1,27 @@
+<div class="mb-3">
+     <label for="efilterText" class="form-label">Search</label>
+     <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Type for search">
+</div>
+
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+     <span class="visually-hidden">Loading...</span>
+</div>
+<table class="table">
+     <thead>
+          <tr>
+               <th>user id</th>
+               <th>FirstName</th>
+               <th>LastName</th>
+               <th>Email</th>
+               
+          </tr>
+     </thead>
+     <tbody>
+          <tr *ngFor="let item of users">
+               <td>{{item.userId}}</td>
+               <td>{{item.firstName}}</td>
+               <td>{{item.lastName}}</td>
+               <td>{{item.email}}</td>
+          </tr>
+     </tbody>
+</table>

@@ -36,8 +36,19 @@ import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getby
 
 import { RegisterComponent } from './components/register/register.component';
 import { UserOperationClaimComponent } from './components/user-operation-claim/user-operation-claim.component';
+import { UserOperationClaimAddComponent } from './components/user-operation-claim-add/user-operation-claim-add.component';
+import { UserOperationClaimDeleteComponent } from './components/user-operation-claim-delete/user-operation-claim-delete.component';
 
 import { FlatGetdetailsComponent } from './components/flat-getdetails/flat-getdetails.component';
+
+import { UserComponent } from './components/user/user.component';
+import { UserDeleteComponent } from './components/user-delete/user-delete.component';
+import { UserGetdetailsComponent } from './components/user-getdetails/user-getdetails.component';
+
+import { CardHistoryDetailsComponent } from './components/card-history-details/card-history-details.component';
+import { CardHistoryGetmonthlymoneyComponent } from './components/card-history-getmonthlymoney/card-history-getmonthlymoney.component';
+import { CardHistoryGetmonthlytotalmoneybyidComponent } from './components/card-history-getmonthlytotalmoneybyid/card-history-getmonthlytotalmoneybyid.component';
+import { CardHistoryGetmonthlymoneybyidComponent } from './components/card-history-getmonthlymoneybyid/card-history-getmonthlymoneybyid.component';
 
 
 
@@ -79,6 +90,18 @@ const routes: Routes = [
 
   {path: "userclaims", component: UserOperationClaimComponent,canActivate:[LoginGuard]},
   {path: "flats/getdetails", component: FlatGetdetailsComponent,canActivate:[LoginGuard]},
+  
+  {path: "userclaims/add", component: UserOperationClaimAddComponent,canActivate:[LoginGuard]},
+  {path: "userclaims/delete", component: UserOperationClaimDeleteComponent,canActivate:[LoginGuard]},
+
+  {path: "users", component:UserComponent ,canActivate:[LoginGuard]},
+  {path: "users/getdetails", component: UserGetdetailsComponent,canActivate:[LoginGuard]},
+  {path: "users/delete", component: UserDeleteComponent,canActivate:[LoginGuard]},
+
+  {path: "cardHistories/getmonthlymoneybyid", component: CardHistoryGetmonthlymoneybyidComponent ,canActivate:[LoginGuard]},
+  {path: "cardHistories/getmonthlytotalmoneybyid", component: CardHistoryGetmonthlytotalmoneybyidComponent ,canActivate:[LoginGuard]},
+  {path: "cardHistories/getmonthlymoney", component: CardHistoryGetmonthlymoneyComponent ,canActivate:[LoginGuard]},
+  {path: "cardHistories/details", component: CardHistoryDetailsComponent ,canActivate:[LoginGuard]},
 ];
 
 @NgModule({

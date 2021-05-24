@@ -1,0 +1,54 @@
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="title">Get total money between interval of flatId</h5>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label>flat Id</label>
+                <input type="number" [(ngModel)]="flatId" class="form-control" placeholder="Type flatId">
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label>secondBegin</label>
+                <input type="number" [(ngModel)]="secondBegin" class="form-control" placeholder="Type secondBegin">
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="mb-3">
+                <label>secondFinal</label>
+                <input type="number" [(ngModel)]="secondFinal" class="form-control" placeholder="Type secondFinal">
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="mb-3">
+                <label>isIncome</label>
+                <input type="boolean" [(ngModel)]="isIncome" class="form-control" placeholder="Type isIncome">
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-fill btn-primary" (click)="getMonthlyTotalMoneyById()">Get</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="dataViewed==true">
+    <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>total money</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let col of [0] ">
+                <td>{{item1}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

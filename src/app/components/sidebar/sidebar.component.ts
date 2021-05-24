@@ -13,11 +13,7 @@ export class SidebarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
-    if (localStorage.getItem('token') != null) {
-      console.log();
-    }
-    this.login = false;//acoun name yazılacak
+    this.login = false;
   }
   signout() {
     this.authService.signOut();

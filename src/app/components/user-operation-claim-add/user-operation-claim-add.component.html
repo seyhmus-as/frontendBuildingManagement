@@ -1,0 +1,43 @@
+<div class="content">
+     <div class="col-md-12">
+         <div class="card">
+             <div class="card-header"><h5 class="title">UserOperationClaim Add</h5></div>
+             <div class="card-body">
+                 <form [formGroup]="userOperationClaimAddForm">
+                    <div class="mb-3">
+                        <label for="id">id</label>
+                        <div class="form-group">
+                            <input
+                            readonly
+                            type="number" 
+                            id="id" 
+                            formControlName="id" class="form-control" 
+                            placeholder="0"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userId">user Id</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="userId" 
+                            formControlName="userId" class="form-control" 
+                            placeholder="userId"/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="operationClaimId">operationClaimId</label>
+                        <div class="form-group">
+                            <input type="number" 
+                            id="operationClaimId" 
+                            formControlName="operationClaimId" class="form-control" 
+                            placeholder="operationClaimId"/>
+                        </div>
+                    </div>
+                 </form>
+             </div>
+             <div class="card-footer">
+                 <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+             </div>
+         </div>
+     </div>
+ </div>

@@ -41,6 +41,16 @@ import { RenterGetbyidComponent } from './components/renter-getbyid/renter-getby
 import { RegisterComponent } from './components/register/register.component';
 import { UserOperationClaimComponent } from './components/user-operation-claim/user-operation-claim.component';
 import { FlatGetdetailsComponent } from './components/flat-getdetails/flat-getdetails.component';
+import { UserOperationClaimAddComponent } from './components/user-operation-claim-add/user-operation-claim-add.component';
+import { UserOperationClaimDeleteComponent } from './components/user-operation-claim-delete/user-operation-claim-delete.component';
+import { UserComponent } from './components/user/user.component';
+import { UserGetdetailsComponent } from './components/user-getdetails/user-getdetails.component';
+import { UserDeleteComponent } from './components/user-delete/user-delete.component';
+import { CardHistoryDetailsComponent } from './components/card-history-details/card-history-details.component';
+import { CardHistoryGetmonthlymoneyComponent } from './components/card-history-getmonthlymoney/card-history-getmonthlymoney.component';
+import { CardHistoryGetmonthlytotalmoneybyidComponent } from './components/card-history-getmonthlytotalmoneybyid/card-history-getmonthlytotalmoneybyid.component';
+import { CardHistoryGetmonthlymoneybyidComponent } from './components/card-history-getmonthlymoneybyid/card-history-getmonthlymoneybyid.component';
+
 
 @NgModule({
   declarations: [
@@ -81,7 +91,16 @@ import { FlatGetdetailsComponent } from './components/flat-getdetails/flat-getde
     RenterGetbyidComponent,
     RegisterComponent,
     UserOperationClaimComponent,
-    FlatGetdetailsComponent
+    FlatGetdetailsComponent,
+    UserOperationClaimAddComponent,
+    UserOperationClaimDeleteComponent,
+    UserComponent,
+    UserGetdetailsComponent,
+    UserDeleteComponent,
+    CardHistoryDetailsComponent,
+    CardHistoryGetmonthlymoneyComponent,
+    CardHistoryGetmonthlytotalmoneybyidComponent,
+    CardHistoryGetmonthlymoneybyidComponent,
   ],
   imports: [
     BrowserModule,
