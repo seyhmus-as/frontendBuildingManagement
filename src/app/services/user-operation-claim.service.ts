@@ -5,23 +5,24 @@ import { ListResponseModel } from '../models/listResponseModel';
 import { ResponseModel } from '../models/responseModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
 import { UserOperationClaim } from '../models/userOperationClaim';
+import { GlobalConstants } from '../common/global-constants';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserOperationClaimService {
+export class UserOperationClaimService implements GlobalConstants {
 
-  apiUrl = 'https://localhost:44380/api/';
+   
 
   constructor(private httpClient: HttpClient) { }
 
   getUserOperationClaims(): Observable<ListResponseModel<UserOperationClaim>> {
-    return this.httpClient.get<ListResponseModel<UserOperationClaim>>(this.apiUrl + "userOperationClaims/getall")
+    return this.httpClient.get<ListResponseModel<UserOperationClaim>>(GlobalConstants.apiUrl + "userOperationClaims/getall")
   }
   add(renter: UserOperationClaimService): Observable<ResponseModel> {
-    return this.httpClient.post<ResponseModel>(this.apiUrl + "UserOperationClaims/add", renter);
+    return this.httpClient.post<ResponseModel>(GlobalConstants.apiUrl + "UserOperationClaims/add", renter);
   }
   delete(id: number) {
-    return this.httpClient.post<ResponseModel>(this.apiUrl + "UserOperationClaims/delete?id=" + id, null);
+    return this.httpClient.post<ResponseModel>(GlobalConstants.apiUrl + "UserOperationClaims/delete?id=" + id, null);
   }
 }

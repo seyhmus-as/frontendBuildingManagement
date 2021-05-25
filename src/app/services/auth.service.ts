@@ -6,13 +6,14 @@ import { TokenModel } from '../models/tokenModel';
 import { RegisterModel } from '../models/registerModel';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { GlobalConstants } from '../common/global-constants';
 
 
 @Injectable({
 	providedIn: 'root'
 })
-export class AuthService {
-	apiUrl = 'https://localhost:44380/api/auth/';
+export class AuthService implements GlobalConstants {
+	apiUrl = GlobalConstants.apiUrl+'auth/';
 	constructor(
 		private httpClient: HttpClient,
 		private router: Router,
@@ -35,10 +36,11 @@ export class AuthService {
 	}
 	signOut(): void {
 		if (localStorage.getItem('token') == null) {
-			this.toastrService.info("giriş olmadan çıkış nasıl olacak hele bi söyle")
+			this.toastrService.info("Already No Account")
 		}
 		else {
 			localStorage.removeItem('token');
+			localStorage.removeItem('accountName');
 			this.toastrService.success("You've been logged out");
 			this.router.navigate(['login']);
 		}

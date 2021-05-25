@@ -6,23 +6,24 @@ import { User } from '../models/user';
 import { ResponseModel } from '../models/responseModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
 import { UserDetail } from '../models/userDetail';
+import { GlobalConstants } from '../common/global-constants';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class UserService implements GlobalConstants {
 
-  apiUrl = 'https://localhost:44380/api/';
+   
 
   constructor(private httpClient: HttpClient) { }
 
   getUsers(): Observable<ListResponseModel<User>> {
-    return this.httpClient.get<ListResponseModel<User>>(this.apiUrl + "users/getall")
+    return this.httpClient.get<ListResponseModel<User>>(GlobalConstants.apiUrl + "users/getall")
   }
   getUserDetails(): Observable<ListResponseModel<UserDetail>> {
-    return this.httpClient.get<ListResponseModel<UserDetail>>(this.apiUrl + "users/getdetails")
+    return this.httpClient.get<ListResponseModel<UserDetail>>(GlobalConstants.apiUrl + "users/getdetails")
   }
   delete(email: string) {
-    return this.httpClient.post<ResponseModel>(this.apiUrl + "users/delete?email=" + email, null);
+    return this.httpClient.post<ResponseModel>(GlobalConstants.apiUrl + "users/delete?email=" + email, null);
   }
 }
