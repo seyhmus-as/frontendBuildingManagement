@@ -19,12 +19,6 @@ export class CardHistoryGetmonthlymoneybyidComponent implements OnInit {
   dataLoaded = false;
   dataViewed = false;
 
-
-  item1?: string
-  item2?: string
-  item3?: string
-  item4?: string
-
   constructor(
     private cardHistoryService: CardHistoryService,
     private toastrService: ToastrService

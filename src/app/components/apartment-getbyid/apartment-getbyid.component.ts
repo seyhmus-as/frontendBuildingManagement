@@ -14,11 +14,6 @@ export class ApartmentGetbyidComponent implements OnInit {
   dataLoaded = false;
   dataViewed = false;
 
-  item1?: string
-  item2?: string
-  item3?: string
-  item4?: string
-
   constructor(
     private apartmentService: ApartmentService,
     private toastrService: ToastrService
@@ -36,11 +31,6 @@ export class ApartmentGetbyidComponent implements OnInit {
     this.apartmentService.getApartmentsById(this.viewedId).subscribe(response => {
       this.apartment = response.data;
       this.dataLoaded = true;
-
-      this.item1 = String(this.apartment.apartmentName);
-      this.item2 = String(this.apartment.apartmentId);
-      this.item3 = String(this.apartment.numberOfFlat);
-      this.item4 = String(this.apartment.numberOfFloor);
     })
   }
 }

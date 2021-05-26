@@ -14,10 +14,6 @@ export class RenterGetbyidComponent implements OnInit {
   dataLoaded = false;
   dataViewed = false;
 
-  item1?: string
-  item2?: string
-  item3?: string
-
   constructor(
     private renterService: RenterService,
     private toastrService: ToastrService
@@ -35,10 +31,6 @@ export class RenterGetbyidComponent implements OnInit {
     this.renterService.getRenterById(this.viewedId).subscribe(response => {
       this.renter = response.data;
       this.dataLoaded = true;
-
-      this.item1=String(this.renter.renterId);
-      this.item2=String(this.renter.firstName);
-      this.item3=String(this.renter.lastName);
     })
   }
 }

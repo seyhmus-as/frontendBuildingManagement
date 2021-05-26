@@ -30,9 +30,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let col of [0]">
-                <td>{{item1}}</td>
-                <td>{{item2 | uppercase}}</td>
-                <td>{{item3}}</td>
+                <td>{{card.cardId | number}}</td>
+                <td>{{card.name}}</td>
+                <td>{{card.isIncome}}</td>
             </tr>
         </tbody>
     </table>

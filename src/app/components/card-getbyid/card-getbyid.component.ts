@@ -14,10 +14,6 @@ export class CardGetbyidComponent implements OnInit {
   dataLoaded = false;
   dataViewed = false;
 
-  item1?: string
-  item2?: string
-  item3?: string
-
   constructor(
     private cardService: CardService,
     private toastrService: ToastrService
@@ -35,10 +31,6 @@ export class CardGetbyidComponent implements OnInit {
     this.cardService.getCardById(this.viewedId).subscribe(response => {
       this.card = response.data;
       this.dataLoaded = true;
-
-      this.item1 = String(this.card.cardId);
-      this.item2 = String(this.card.name);
-      this.item3 = String(this.card.isIncome);
     })
   }
 }

@@ -18,9 +18,6 @@ export class CardHistoryGetmonthlytotalmoneybyidComponent implements OnInit {
   dataLoaded = false;
   dataViewed = false;
 
-
-  item1?: string
-
   constructor(
     private cardHistoryService: CardHistoryService,
     private toastrService: ToastrService
@@ -45,8 +42,6 @@ export class CardHistoryGetmonthlytotalmoneybyidComponent implements OnInit {
     ).subscribe(response => {
       this.totalMoney = response.data;
       this.dataLoaded = true;
-
-      this.item1 = String(this.totalMoney);
     })
   }
 }

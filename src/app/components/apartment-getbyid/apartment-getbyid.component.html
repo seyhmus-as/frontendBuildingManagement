@@ -31,11 +31,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let col of [0] ">
-                <td>{{item1}}</td>
-                <td>{{item2| uppercase}}</td>
-                <td>{{item3}}</td>
-                <td>{{item4}}</td>
+            <tr *ngFor="let col of [0]">
+                <td>{{apartment.apartmentName}}</td>
+                <td>{{apartment.apartmentId | number  }}</td>
+                <td>{{apartment.numberOfFlat | number}}</td>
+                <td>{{apartment.numberOfFloor | number}}</td>
             </tr>
         </tbody>
     </table>

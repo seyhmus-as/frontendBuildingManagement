@@ -14,12 +14,6 @@ export class FlatGetbyidComponent implements OnInit {
   dataLoaded = false;
   dataViewed = false;
 
-  item1?: string
-  item2?: string
-  item3?: string
-  item4?: string
-  item5?: string
-
   constructor(
     private flatService: FlatService,
     private toastrService: ToastrService
