@@ -9,7 +9,7 @@ import { FlatService } from 'src/app/services/flat.service';
   styleUrls: ['./flat-getbyid.component.css']
 })
 export class FlatGetbyidComponent implements OnInit {
-  flat: Flat;
+  flats: Flat[]=[];
   viewedId?: number;
   dataLoaded = false;
   dataViewed = false;
@@ -18,6 +18,7 @@ export class FlatGetbyidComponent implements OnInit {
   item2?: string
   item3?: string
   item4?: string
+  item5?: string
 
   constructor(
     private flatService: FlatService,
@@ -34,13 +35,8 @@ export class FlatGetbyidComponent implements OnInit {
     }
     this.dataViewed = true;
     this.flatService.getFlatById(this.viewedId).subscribe(response => {
-      this.flat = response.data;
+      this.flats = response.data;
       this.dataLoaded = true;
-
-      this.item1=String(this.flat.flatId);
-      this.item2=String(this.flat.apartmentId);
-      this.item3=String(this.flat.priceOfRent);
-      this.item4=String(this.flat.renterId);
     })
   }
 }

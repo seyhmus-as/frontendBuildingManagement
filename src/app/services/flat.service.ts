@@ -22,8 +22,8 @@ export class FlatService implements GlobalConstants {
   getFlatDetails(): Observable<ListResponseModel<FlatDetail>> {
     return this.httpClient.get<ListResponseModel<FlatDetail>>(GlobalConstants.apiUrl + "flats/getdetails")
   }
-  getFlatById(viewedId: number): Observable<SingleResponseModel<Flat>> {
-    return this.httpClient.get<SingleResponseModel<Flat>>(GlobalConstants.apiUrl + "flats/getbyid?id=" + viewedId)
+  getFlatById(viewedId: number): Observable<ListResponseModel<Flat>> {
+    return this.httpClient.get<ListResponseModel<Flat>>(GlobalConstants.apiUrl + "flats/getbyid?flatid=" + viewedId)
   }
   add(flat: FlatService): Observable<ResponseModel> {
     return this.httpClient.post<ResponseModel>(GlobalConstants.apiUrl + "flats/add", flat);

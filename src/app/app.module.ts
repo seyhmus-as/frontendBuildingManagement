@@ -110,7 +110,8 @@ import { CardHistoryGetmonthlymoneybyidComponent } from './components/card-histo
     BrowserAnimationsModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
-      positionClass: "toast-bottom-right"
+      positionClass: "toast-bottom-right",
+      timeOut:10000//10second
     })
   ],
   providers: [

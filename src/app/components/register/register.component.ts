@@ -30,18 +30,20 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-  register() {
-    if (this.registerForm.valid) {
-      let registerModel = Object.assign({}, this.registerForm.value)
-
-      this.authService.register(registerModel).subscribe(response => {
-        this.toastrService.success(response.message, "Success Register")
-      }, responseError => {
-        this.toastrService.error(responseError.error, "Validation or Authentication Error")
-      })
-    } else {
-      this.toastrService.error("Missing Form","Warning");
-    }
-  }
-
+  register()  {
+		if (this.registerForm.valid) {
+			let registerModel = Object.assign({}, this.registerForm.value)
+			this.authService.register(registerModel).subscribe(response => {
+				this.toastrService.success(response.message,"Success Register")
+			}, responseError => {
+				if (responseError.error.Errors.length > 0) {
+					for (let i = 0; i < responseError.error.Errors.length; i++) {
+						this.toastrService.error(responseError.error.Errors[i].ErrorMessage, "Validation or Authentication Error")
+					}
+				}
+			})
+		} else {
+			this.toastrService.error("Missing Form","Warning");
+		}
+	}
 }

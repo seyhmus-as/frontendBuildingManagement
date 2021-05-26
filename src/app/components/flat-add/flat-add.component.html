@@ -7,6 +7,17 @@
             <div class="card-body">
                 <form [formGroup]="flatAddForm">
                     <div class="mb-3">
+                        <label for="id">Id</label>
+                        <div class="form-group">
+                            <input
+                            readonly
+                            type="number" 
+                            id="id" 
+                            formControlName="id" class="form-control" 
+                            placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="mb-3">
                         <label for="flatId">Flat Id</label>
                         <div class="form-group">
                             <input type="number" id="flatId" formControlName="flatId" class="form-control"

@@ -1,42 +1,44 @@
 <div *ngIf="dataViewed==false">
-     <div class="col-md-12">
-         <div class="card">
-             <div class="card-header">
-                 <h5 class="title">Get Flat By Id</h5>
-             </div>
-             <div class="card-body">
-                 <div class="mb-3">
-                     <label>Flat Id</label>
-                     <input type="number" [(ngModel)]="viewedId" class="form-control" placeholder="type flat id">
-                 </div>
-             </div>
-             <div class="card-footer">
-                 <button class="btn btn-fill btn-primary" (click)="getFlatById()">Get</button>
-             </div>
-         </div>
-     </div>
- </div>
- <div *ngIf="dataViewed==true">
-     <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
-         <span class="visually-hidden">Loading...</span>
-     </div>
-     <table class="table">
-         <thead>
-             <tr>
-                 <th>Flat Id</th>
-                 <th>Apartment Id</th>
-                 <th>Price of Rent</th>
-                 <th>Renter Id</th>
-                 
-             </tr>
-         </thead>
-         <tbody>
-             <tr *ngFor="let col of [0]">
-                 <td>{{item1}}</td>
-                 <td>{{item2}}</td>
-                 <td>{{item3}}</td>
-                 <td>{{item4}}</td>
-             </tr>
-         </tbody>
-     </table>
- </div>
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="title">Get Flat By Id</h5>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label>Flat Id</label>
+                    <input type="number" [(ngModel)]="viewedId" class="form-control" placeholder="type flat id">
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-fill btn-primary" (click)="getFlatById()">Get</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="dataViewed==true">
+    <div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Flat Id</th>
+                <th>Apartment Id</th>
+                <th>Price of Rent</th>
+                <th>Renter Id</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of flats">
+                <td>{{item.id}}</td>
+                <td>{{item.flatId}}</td>
+                <td>{{item.apartmentId}}</td>
+                <td>{{item.priceOfRent}}</td>
+                <td>{{item.renterId}}</td>
+           </tr>
+        </tbody>
+    </table>
+</div>
