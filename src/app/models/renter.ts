@@ -1,5 +1,5 @@
 export interface Renter{
-     renterId:number;
+     id:number;
      firstName:string;
      lastName:string;
 }

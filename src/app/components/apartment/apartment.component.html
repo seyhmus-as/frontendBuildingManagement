@@ -16,9 +16,9 @@
           </tr>
      </thead>
      <tbody>
-          <tr *ngFor="let item of apartments| filterPipe:filterText">
-               <td>{{item.apartmentId}}</td>
-               <td>{{item.apartmentName| uppercase}}</td>
+          <tr *ngFor="let item of apartments | filterPipe:filterText">
+               <td>{{item.id}}</td>
+               <td>{{item.name| uppercase}}</td>
                <td>{{item.numberOfFlat}}</td>
                <td>{{item.numberOfFloor}}</td>
           </tr>

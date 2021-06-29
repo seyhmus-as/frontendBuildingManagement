@@ -25,10 +25,10 @@ export class ApartmentAddComponent implements OnInit {
 
 	createApartmentAddForm() {
 		this.apartmentAddForm = this.formBuilder.group({
-			apartmentName: ["", Validators.required],
-			apartmentId: ["0", Validators.required],
-			numberOfFlat: ["", Validators.required],
-			numberOfFloor: ["", Validators.required]
+			Name: ["", Validators.required],
+			Id: ["0", Validators.required],
+			NumberOfFlat: ["", Validators.required],
+			NumberOfFloor: ["", Validators.required]
 		})
 	}
 

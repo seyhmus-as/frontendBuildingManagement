@@ -1,6 +1,6 @@
 export interface Flat{
      id:number;
-     flatId:number;
+     flatNo:number;
      apartmentId:number;
      priceOfRent:number;
      renterId:number;

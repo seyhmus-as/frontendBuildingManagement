@@ -8,7 +8,6 @@
 <table class="table">
      <thead>
           <tr>
-               <th>Id</th>
                <th>Flat Id</th>
                <th>Apartment Id</th>
                <th>Price of Rent</th>
@@ -17,8 +16,7 @@
      </thead>
      <tbody>
           <tr *ngFor="let item of flats">
-               <td>{{item.id}}</td>
-               <td>{{item.flatId}}</td>
+               <td>{{item.flatNo}}</td>
                <td>{{item.apartmentId}}</td>
                <td>{{item.priceOfRent}}</td>
                <td>{{item.renterId}}</td>

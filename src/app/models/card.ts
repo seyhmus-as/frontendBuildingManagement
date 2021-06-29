@@ -1,5 +1,5 @@
 export interface Card{
-     cardId:number;
+     id:number;
      name:string;
      isIncome:boolean;
 }

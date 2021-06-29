@@ -27,7 +27,7 @@ export class FlatAddComponent implements OnInit {
 		this.flatAddForm = this.formBuilder.group({
 			id: ["0", Validators.required],
 			flatId: ["", Validators.required],
-			apartmentId: ["", Validators.required],
+			Id: ["", Validators.required],
 			priceOfRent: ["", Validators.required],
 			renterId: ["", Validators.required]
 		})

@@ -1,8 +1,9 @@
 export interface FlatDetail{
-	flatId :number
+	id :number
+	flatNo :number
 	priceOfRent :number
 	renterId :number
 	renterName :string
-	apartmentId :number
 	apartmentName :string
+	apartmentId :string
 }

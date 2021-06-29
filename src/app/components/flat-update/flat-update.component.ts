@@ -27,7 +27,7 @@ export class FlatUpdateComponent implements OnInit {
 		this.flatUpdateForm = this.formBuilder.group({
 			id: ["", Validators.required],
 			flatId: ["", Validators.required],
-			apartmentId: ["", Validators.required],
+			Id: ["", Validators.required],
 			priceOfRent: ["", Validators.required],
 			renterId: ["", Validators.required]
 		})
